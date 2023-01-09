@@ -5,7 +5,7 @@
   role: Team Lead & Primary Developer
   duration: 2022
   url: https://drive.google.com/file/d/1HijS6-6f-ZSWZjqTCZIvWHUStWlssU2F/view?usp=share_link
-  description: Co-authored a study investigating automated speaker verification systems using a TDNN model. Proposed improvements to existing DNN speaker recognition systems by utilising Speechbrain’s modular framework to compare the accuracies of different experimental setups in reducing validation error. Developed a frontend interface to demonstrate project outcomes and placed in the top 3 teams in the cohort.
+  description: "Co-authored a study investigating automated speaker verification systems using a TDNN model. Proposed improvements to existing DNN speaker recognition systems by utilising Speechbrain’s modular framework to compare the accuracies of different experimental setups in reducing validation error. Developed a frontend interface to demonstrate project outcomes and placed in the top 3 teams in the cohort."
 
 # Object-oriented programming
 - project: Dungeon (RPG) Game
@@ -19,11 +19,10 @@
   role: Team Lead & Primary Developer
   duration: 2021
   url: https://github.com/yashR4J/online_discussion_forum
-  description: Led 5 software engineering students to design and deliver a backend Python webserver for a communication tool for groups to support high intensity learning environments. Applied Agile SDLC methodologies as well as test-driven development practices and developed an appreciation for product design and user-centred design frameworks. Dealt with Flask, session handling, token-based authentication. Placed in the top 10% in a cohort of 250 students. 
-
+  description: "Led 5 software engineering students to design and deliver a backend Python webserver for a communication tool for groups to support high intensity learning environments. Applied Agile SDLC methodologies as well as test-driven development practices and developed an appreciation for product design and user-centred design frameworks. Dealt with Flask, session handling, token-based authentication. Placed in the top 10% in a cohort of 250 students. "
 # R2R 
 - project: Robots to the Rescue | Design Project
   role: Team Lead & Primary Developer
   duration: 2020
   url: https://unsw-my.sharepoint.com/:w:/g/personal/z5317349_ad_unsw_edu_au/EQiAUmjOB3hPsgbHMY_K1-8BM1hBEJBUt4e133WGMp0PLw?e=vMU7DK
-  description: Led 6 engineering students to design and construct a modular rescue robot using Arduino hardware components. Delivered project design proposals and systems analysis reports to clearly communicate product specifications and fulfil objectives of quality improvement processes. Placed in top 5 teams and selected for the UNSW Virtual Showcase for the impressive engineering quality of the final design.
+  description: "Led 6 engineering students to design and construct a modular rescue robot using Arduino hardware components. Delivered project design proposals and systems analysis reports to clearly communicate product specifications and fulfil objectives of quality improvement processes. Placed in top 5 teams and selected for the UNSW Virtual Showcase for the impressive engineering quality of the final design."
