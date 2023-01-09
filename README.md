@@ -1,4 +1,6 @@
-# Resume template
+# Online Resume
+
+Available at: yashR4J.github.io
 
 ## Docs
 
