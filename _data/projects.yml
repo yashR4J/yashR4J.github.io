@@ -7,13 +7,6 @@
   url: https://drive.google.com/file/d/1HijS6-6f-ZSWZjqTCZIvWHUStWlssU2F/view?usp=share_link
   description: Co-authored a study investigating automated speaker verification systems using a TDNN model. Proposed improvements to existing DNN speaker recognition systems by utilising Speechbrain’s modular framework to compare the accuracies of different experimental setups in reducing validation error. Developed a frontend interface to demonstrate project outcomes and placed in the top 3 teams in the cohort.
 
-# Springfield Community Outreach Group
-- project: Springfield Community Outreach Group
-  role: Co-Founder & Organizer
-  duration: 2007 &mdash; Present
-  # url: "#"
-  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
-
 # Object-oriented programming
 - project: Dungeon RPG Game
   role: Technical Team Lead, Scrum Master & Developer
