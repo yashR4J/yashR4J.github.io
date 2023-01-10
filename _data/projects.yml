@@ -8,9 +8,9 @@
   description: "Co-authored a study investigating automated speaker verification systems using a TDNN model. Proposed improvements to existing DNN speaker recognition systems by utilising Speechbrain’s modular framework to compare the accuracies of different experimental setups in reducing validation error. Developed a frontend interface to demonstrate project outcomes and placed in the top 3 teams in the cohort."
 
 # Object-oriented programming
-- project: Dungeon (RPG) Game
-  role: Technical Team Lead, Scrum Master & Developer
-  duration: 2021
+- project: "Dungeon (RPG) Game"
+  role: "Technical Team Lead, Scrum Master & Developer"
+  duration: 2021 
   url: https://github.com/yashR4J/object_oriented_design_and_programming/tree/main/project
   description: "Co-led a team of 5 software engineering students to design and construct the backend for a 2D action platform game by applying UML modelling practices. Developed project management skills by utilising Git practices and running regular sprint planning and stand-up meetings. Acquired code organisation skills by using appropriate design patterns for object-oriented programming (IBNLT : Strategy, State, Composite and Observer Patterns). Gained exposure to Java, HTML/CSS, JavaScript, React and Node.js".
 
@@ -20,6 +20,7 @@
   duration: 2021
   url: https://github.com/yashR4J/online_discussion_forum
   description: "Led 5 software engineering students to design and deliver a backend Python webserver for a communication tool for groups to support high intensity learning environments. Applied Agile SDLC methodologies as well as test-driven development practices and developed an appreciation for product design and user-centred design frameworks. Dealt with Flask, session handling, token-based authentication. Placed in the top 10% in a cohort of 250 students. "
+
 # R2R 
 - project: Robots to the Rescue | Design Project
   role: Team Lead & Primary Developer
