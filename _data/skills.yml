@@ -1,20 +1,16 @@
 # Skills
 # Programming Languages
 - skill: Unix/Linux, C/C++, Python, Java, Bash, Arduino, MIPS Assembly
-  description: <>
 
 # Database
 - skill: MySQL, PostgreSQL, MongoDB, AWS, Google Cloud Platform, Client/Server Architecture
-  description: <>
 
 # Tools
 - skill: Git, GitHub, VS Code, JIRA, Axure
-  description: <>
-  
+ 
 # Frontend Design + Web Development
 - skill: Django, HTML, CSS, JavaScript, React, Docker, WordPress
-  description: <>
 
 # Other
 - skill: Machine Learning, Time Series Analysis, Neural Networks, Deep Learning
-  description: <>
+
