@@ -1,11 +1,23 @@
 # Projects
 
+# E-Invoice Management Web Application
+- project: E-Invoice Management Web Application
+  role: Technical Team Lead, Scrum Master & Developer
+  duration: 2023
+  url: https://seng2021-coders.web.app/
+  description: Designed and implemented a full-stack web application that streamlined invoicing processes for businesses by providing online management of e-invoices, digital rendering into universally compatible file types, and other features. Constructed a robust backend using Express.js and Javascript, and designed a Next.js frontend to deliver maximum value to users. Incorporated several reliable APIs, such as Google Translate API for invoice translation and Twilio Sendgrid for reliable file transfer, to enhance functionality.
+  
 # Neural Networks
 - project: Automated Speaker Verification | DNNs and Transfer Learning
   role: Team Lead & Primary Developer
   duration: 2022
   url: https://drive.google.com/file/d/1HijS6-6f-ZSWZjqTCZIvWHUStWlssU2F/view?usp=share_link
-  description: Co-authored a study investigating automated speaker verification systems using a TDNN model. Proposed improvements to existing DNN speaker recognition systems by utilising Speechbrain’s modular framework to compare the accuracies of different experimental setups in reducing validation error. Developed a frontend interface to demonstrate project outcomes and placed in the top 3 teams in the cohort.
+  description: Co-authored a study investigating automated speaker verification 
+  systems using a TDNN model. Proposed improvements to existing DNN speaker 
+  recognition systems by utilising Speechbrain’s modular framework to compare 
+  the accuracies of different experimental setups in reducing validation error. 
+  Developed a frontend interface to demonstrate project outcomes and placed in 
+  the top 3 teams in the cohort.
 
 # Covid-19 Tracker
 - project: COVID-19 Tracker
