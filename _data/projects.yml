@@ -12,12 +12,7 @@
   role: Team Lead & Primary Developer
   duration: 2022
   url: https://drive.google.com/file/d/1HijS6-6f-ZSWZjqTCZIvWHUStWlssU2F/view?usp=share_link
-  description: Co-authored a study investigating automated speaker verification 
-  systems using a TDNN model. Proposed improvements to existing DNN speaker 
-  recognition systems by utilising Speechbrain’s modular framework to compare 
-  the accuracies of different experimental setups in reducing validation error. 
-  Developed a frontend interface to demonstrate project outcomes and placed in 
-  the top 3 teams in the cohort.
+  description: Co-authored a study investigating automated speaker verification systems using a TDNN model. Proposed improvements to existing DNN speaker recognition systems by utilising Speechbrain’s modular framework to compare the accuracies of different experimental setups in reducing validation error. Developed a frontend interface to demonstrate project outcomes and placed in the top 3 teams in the cohort.
 
 # Covid-19 Tracker
 - project: COVID-19 Tracker
