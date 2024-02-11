@@ -2,9 +2,15 @@
 
 # Software Internship
 - company: WiseTech Global
-  position: Software Engineer, Internship
+  position: Software Engineer, Contract
   duration: February, 2023; Present
-  summary: Collaborating with a team of 50+ engineers to develop and maintain the CargoWise product while leveraging cross-functional collaboration and agile methodologies. Implementing unit tests to validate functionality, migrating projects to modern SDK, extracting unit tests and upgrading third-party components.
+  summary: Collaborating with a team of 50+ engineers to develop and maintain the CargoWise product while leveraging cross-functional collaboration and agile methodologies. Implementing unit tests to validate functionality, migrating projects to modern SDK, extracting unit tests and upgrading third-party components. Actively involved in maintenance of CargoWise Database and Session Host servers and the development of an end-to-end robotic process automation (RPA) health checker for WiseCloud Accessor (WCA) to provide a repeatable, automated way to provide ongoing assurance over the ability of an arbitrary user to use WCA as designed.
+
+# Software Internship
+- company: Sunswift Racing
+  position: Technical Team Lead (Internal Tools)
+  duration: January, 2023; January, 2024
+  summary: Contributed to the design and development of an ERP software as part of the Internal Tools team, facilitating a smooth transition from legacy spreadsheets to a cohesive and integrated environment. Engaged in full-stack development to ensure a comprehensive and user-friendly ERP system. Collaborated effectively with various departments, facilitating seamless communication and understanding of requirements. Contributed significantly to improving overall team productivity by providing advanced tools for data analysis and reporting.
 
 # Private Tutor
 - company: UNSW - Faculty of Engineering and Computer Science
