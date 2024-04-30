@@ -1,5 +1,12 @@
 # Projects
 
+# Finance Event Intelligence Platform
+- project: Finance Event Intelligence
+  role: Product Owner, Lead Backend Engineer
+  duration: 2024
+  url: https://unsw-my.sharepoint.com/:b:/g/personal/z5317349_ad_unsw_edu_au/EfFepNucSIpEpR1ubw40tVMBDT50FNmVJ0hLLnORfkFQIw?e=xKu6yh
+  description: Designed and engineered a cloud-based microservices architecture for a financial analytics application, leveraging AWS tools like Lambda, S3, and API Gateway to optimize data processing and storage. Developed in a dynamic software engineering environment, this project involved detailed implementation of CI/CD pipelines using Terraform, extensive testing protocols across multiple stages, and integration of comprehensive observability strategies with AWS CloudWatch. The architecture facilitated scalable, efficient management of complex financial data, enhancing decision-making capabilities for users through advanced data visualization and real-time analytics.
+
 # E-Invoice Management Web Application
 - project: E-Invoice Management Web Application
   role: Technical Team Lead, Scrum Master & Developer
