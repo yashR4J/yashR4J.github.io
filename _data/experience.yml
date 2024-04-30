@@ -4,8 +4,8 @@
 - company: WiseTech Global
   position: Software Engineer, Contract
   duration: February, 2023 &mdash; Present
-  summary: Collaborating with a team of 50+ engineers to develop and maintain the CargoWise product while leveraging cross-functional collaboration and agile methodologies. Implementing unit tests to validate functionality, migrating projects to modern SDK, extracting unit tests and upgrading third-party components. Actively involved in maintenance of CargoWise Database and Session Host servers and the development of an end-to-end robotic process automation (RPA) health checker for WiseCloud Accessor (WCA) to provide a repeatable, automated way to provide ongoing assurance over the ability of an arbitrary user to use WCA as designed.
-
+  summary: Reorganized and segregated test projects from production code, implementing best practices in project structure to streamline build processes and prevent deployment of test code to production environments. Contributed to the troubleshooting and resolution of key system performance issues, focusing on optimising session management and database connectivity, significantly improving the reliability of cloud-based software services.
+  
 # Private Tutor
 - company: UNSW - Faculty of Engineering and Computer Science
   position: Casual Academic
@@ -21,5 +21,5 @@
 # Private Tutor
 - company: Mayfair Education
   position: Private Tutor
-  duration: June, 2020 &mdash; Present
+  duration: June, 2020 &mdash; December, 2022
   summary: Tutoring high school students English, Mathematics, Physics and Chemistry with an emphasis on identifying lagging skills and correcting weaknesses. Outlining personalized action plans accompanied with positive reinforcement, repetition, and review to help students master challenging material. Generating reports and providing actionable feedback, which has led to a 100% student improvement by at least one grade band.
