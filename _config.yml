@@ -23,7 +23,7 @@ resume_contact_address:         ""
 resume_header_contact_info:     "0403 016 557 • yash.raj2@outlook.com"
 display_header_contact_info:    "false"
 
-resume_header_intro: "<p>Final-year software engineering and finance student with a keen interest in fintech, security, and cloud technology. Currently employed as a software engineer at WiseTech Global (CargoWise Cloud team), dedicated to collaborating within project teams to develop innovative business solutions for transformative engineering projects. Eager to diversify personal competencies and help companies broaden developmental processes and software audiences.</p>"
+resume_header_intro: "<p>Software engineer with a strong foundation in systems design and cloud-native development. At WiseTech Global I’ve contributed to reliability and performance improvements across session management and database connectivity for CargoWise Cloud. I mentor students in data structures and algorithms, and build products end‑to‑end—from microservices on AWS to modern frontends. Recognized on the UNSW Engineering Dean’s Honours List, I’m focused on scalable architectures, developer experience, and measurable impact.</p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
@@ -56,7 +56,7 @@ resume_social_links:
 resume_print_social_links:      true
 
 # Design settings
-resume_theme:                   default
+resume_theme:                   modern
 
 # Note: when editing locally, remember to restart
 # your Jekyll server when you edit this file. Changes
