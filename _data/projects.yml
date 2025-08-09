@@ -1,5 +1,12 @@
 # Projects
 
+# Thesis
+- project: Enabling Passive Measurement of Microsoft Teams Performance on Campus Networks
+  role: Author, Researcher
+  duration: 2024
+  url: https://drive.google.com/file/d/1aFmF6CFS9GnRQxPraM2nXgSY1BLh_6W_/view?usp=sharing
+  description: Developed GoTeamsFlow, an open‑source tool for passive analysis of Microsoft Teams traffic (Golang, Wireshark), under the mentorship of Dr. Vijay Sivaraman and in collaboration with Canopus Networks. Delivered actionable QoS/QoE metrics—such as session setup times, media bitrates, and call abandonment rates—to identify performance bottlenecks and inform adaptive QoS strategies for enterprise‑grade network optimization.
+
 # Finance Event Intelligence Platform
 - project: Finance Event Intelligence Platform
   role: Product Owner, Lead Backend Engineer
