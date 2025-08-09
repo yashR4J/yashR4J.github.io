@@ -11,19 +11,19 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Yash Raj"
-resume_title:                   "Software Engineering / Finance Student"
+resume_title:                   "Graduate Software Engineer"
 
 # used for the contact button in _layouts/resume.html
 resume_contact_email:           "yash.raj2@outlook.com"
 
 # the next two items are used for schema itemprops in _layouts/resume.html
-resume_contact_telephone:       "0403 016 557"
+resume_contact_telephone:       "(+61) 0403 016 557"
 resume_contact_address:         ""
 
-resume_header_contact_info:     "0403 016 557 • yash.raj2@outlook.com"
+resume_header_contact_info:     "(+61) 0403 016 557 • yash.raj2@outlook.com"
 display_header_contact_info:    "false"
 
-resume_header_intro: "<p>Software engineer focused on high‑reliability systems, cloud‑native platforms, and developer experience. At WiseTech Global, I improved session management and database connectivity for CargoWise Cloud to reduce latency and increase service resilience. I mentor students in data structures and algorithms and deliver products end‑to‑end—from infrastructure as code and CI/CD to modern frontends. Recognized on the UNSW Engineering Dean’s Honours List across multiple years, I prioritize measurable impact and clean, scalable architecture.</p>"
+resume_header_intro: "<p>Graduate Software Engineer with deep expertise in cloud-based infrastructure, distributed systems, automation, and performance optimization—particularly in high-stakes environments like fintech and trading platforms. Demonstrated ability to build low-latency, fault-tolerant services (C#/.NET), automate disaster recovery and observability pipelines, and boost reliability for enterprise-scale applications.</p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,

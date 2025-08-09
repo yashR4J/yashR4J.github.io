@@ -3,14 +3,14 @@
 
 .theme-modern {
   // CSS variables to enable easy light/dark theming
-  --bg: #0b0f14;
-  --bg-elev: #0f1520;
+  --bg: #0b1220;         // darker background for better contrast
+  --bg-elev: #0e172a;
   --surface: #111827;
-  --text: #e6eaf2;
-  --muted: #a6b0c0;
-  --primary: #6ee7f0;
-  --primary-2: #8b5cf6;
-  --accent: #22d3ee;
+  --text: #e5e7eb;       // softer light gray for readability
+  --muted: #94a3b8;      // slate-400
+  --primary: #60a5fa;    // blue-400
+  --primary-2: #7c3aed;  // violet-600
+  --accent: #38bdf8;     // sky-400
   --ring: rgba(110, 231, 240, 0.35);
   --card: rgba(17, 24, 39, 0.7);
   --border: rgba(255, 255, 255, 0.08);
@@ -68,6 +68,9 @@
       border-radius: 9999px;
       border: 1px solid var(--border);
       box-shadow: 0 10px 30px var(--shadow), 0 0 0 6px var(--ring);
+      object-fit: cover;   // prevent stretch
+      object-position: center;
+      aspect-ratio: 1 / 1; // keep square
     }
 
     .header-name {
@@ -204,7 +207,7 @@
     padding: 16px 18px 14px 18px;
     margin-left: 0;
     border: 1px solid var(--border);
-    background: var(--card);
+    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
     backdrop-filter: saturate(120%) blur(6px);
     -webkit-backdrop-filter: saturate(120%) blur(6px);
     border-radius: 14px;
@@ -215,6 +218,28 @@
     .resume-item-title a { border-bottom: none; }
     .resume-item-details { margin-bottom: 0.4rem; }
   }
+
+  // Buttons (for project actions)
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.04);
+    color: var(--text);
+    font-size: 0.875rem;
+    text-decoration: none;
+    @include transition(all .2s ease);
+  }
+  .btn:hover { background: rgba(255,255,255,0.06); }
+  .btn-primary {
+    background: linear-gradient(90deg, var(--primary), var(--primary-2));
+    border: none;
+    color: #0b1220;
+  }
+  .project-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 
   // Skill badges
   .skills-grid {
