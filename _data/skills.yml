@@ -1,19 +1,72 @@
-# Skills
-# Programming Languages
-- skill: C/C++, Python, Java, C#, Javascript, Kotlin, Bash/Shell, PowerShell, HTML5/CSS, Arduino, MIPS Assembly
+# Skills (categorized)
+- category: Programming Languages
+  items:
+    - Go (Golang)
+    - Python
+    - Java
+    - C#
+    - C/C++
+    - JavaScript/TypeScript
+    - Kotlin
+    - Bash
+    - PowerShell
+    - SQL
+    - HTML/CSS
 
-# Tools
-- skill: Git, GitHub, Visual Studio, JIRA, Axure, Terraform
-- skill: Firebase, Railway, Vite, Google Cloud Platform
- 
-# Frontend Design + Web Development
-- skill: Django, HTML, CSS, JavaScript, React, Vue, Docker, WordPress
+- category: Frameworks & Libraries
+  items:
+    - React
+    - Next.js
+    - Vue
+    - Django
+    - Express.js
+    - Node.js
+    - Material UI
 
-# Platforms
-- skill: UNIX/Linux, Windows, macOS
+- category: Cloud & DevOps
+  items:
+    - AWS (Lambda, API Gateway, S3, CloudWatch)
+    - Terraform
+    - Docker
+    - Firebase
+    - Railway
+    - Vite
+    - Google Cloud Platform
+    - CI/CD
 
-# Other
-- skill: Machine Learning, Time Series Analysis, Neural Networks, Deep Learning
+- category: Databases & Data
+  items:
+    - PostgreSQL
+    - MySQL
+    - MongoDB
+    - Redis
+    - Data Modeling
+    - ETL Pipelines
 
-# Database
-- skill: MySQL, PostgreSQL, MongoDB, AWS, Google Cloud Platform, Client/Server Architecture
+- category: Systems & Networking
+  items:
+    - UNIX/Linux
+    - Windows
+    - macOS
+    - TCP/IP
+    - Wireshark
+    - REST
+    - WebSockets
+
+- category: Tools & Practices
+  items:
+    - Git
+    - GitHub
+    - Jira
+    - Test Automation
+    - Observability
+    - Performance Profiling
+    - Agile / Scrum
+
+- category: AI / ML
+  items:
+    - Machine Learning
+    - Deep Learning
+    - Speechbrain
+    - Time Series Analysis
+    - Transfer Learning

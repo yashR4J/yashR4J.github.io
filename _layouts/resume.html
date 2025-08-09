@@ -39,6 +39,8 @@
           {{ site.resume_header_intro }}
         </div>
 
+        <button id="themeToggle" class="contact-button no-print" type="button" aria-label="Toggle theme">Toggle theme</button>
+
         {% if site.resume_looking_for_work == 'yes' %}
         <a href="mailto:{{ site.resume_contact_email }}" class="contact-button no-print" itemprop="email">Contact me</a>
         {% elsif site.resume_looking_for_work == 'no' %}
@@ -123,23 +125,18 @@
         <header class="section-header">
           <h2>Skills</h2>
         </header>
-        {% for skill in site.data.skills %}
-          <div class="resume-item">
-            <h4 class="resume-item-details">{{ skill.skill }}</h4>
-            {% if skill.description %}
-              <p class="resume-item-copy">{{ skill.description }}</p>
-            {% endif %}
-            {% assign tokens = skill.skill | split: ',' %}
-            <ul class="badge-list">
-              {% for token in tokens %}
-                {% assign label = token | strip %}
-                {% if label and label != '' %}
+        <div class="skills-grid">
+          {% for group in site.data.skills %}
+            <div class="skill-card">
+              <h3 class="skill-card-title">{{ group.category }}</h3>
+              <ul class="badge-list">
+                {% for label in group.items %}
                   <li class="badge">{{ label }}</li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-          </div>
-        {% endfor %}
+                {% endfor %}
+              </ul>
+            </div>
+          {% endfor %}
+        </div>
       </section>
       <!-- end Skills -->
       {% endif %}
