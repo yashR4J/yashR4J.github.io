@@ -10,9 +10,6 @@
     - Built GoTeamsFlow, an open‑source passive analyzer for Microsoft Teams traffic with automatic session reconstruction and flow classification.
     - Surfaced QoS/QoE metrics (setup latency, media bitrate, call abandonment) to pinpoint bottlenecks across access and core networks.
     - Enabled data‑driven QoS policy tuning and capacity planning for enterprise networks in collaboration with Canopus Networks.
-  actions:
-    - label: Read thesis
-      url: https://drive.google.com/file/d/1aFmF6CFS9GnRQxPraM2nXgSY1BLh_6W_/view?usp=sharing
 
 # Finance Event Intelligence Platform
 - project: Finance Event Intelligence Platform
@@ -24,9 +21,6 @@
     - Designed event‑driven microservices for ingesting market events, with fan‑out processing and idempotent pipelines.
     - Automated multi‑stage CI/CD with Terraform and policy‑as‑code; embedded synthetic checks and SLO dashboards.
     - Delivered real‑time analytics with streaming transforms and pre‑aggregations for sub‑second UI latencies.
-  actions:
-    - label: Architecture notes
-      url: https://unsw-my.sharepoint.com/:b:/g/personal/z5317349_ad_unsw_edu_au/EfFepNucSIpEpR1ubw40tVMBDT50FNmVJ0hLLnORfkFQIw?e=xKu6yh
 
 # E-Invoice Management Web Application
 - project: E‑Invoice Management Web Application
@@ -38,10 +32,7 @@
     - Digitized invoice lifecycle with secure upload, parsing, translation, and multi‑format rendering.
     - Hardened authentication and role‑based access; wrote integration tests for critical flows.
     - Reduced manual ops via automated notifications and export pipelines.
-  actions:
-    - label: Visit app
-      url: https://seng2021-coders.web.app/
-  
+
 # Neural Networks
 - project: Automated Speaker Verification — DNNs & Transfer Learning
   role: Team Lead & Primary Developer
@@ -51,9 +42,6 @@
   highlights:
     - Benchmarked TDNN variants and transfer‑learning strategies to reduce validation error for ASV.
     - Built a demo UI to visualize embeddings and decision boundaries; placed top‑3 in cohort.
-  actions:
-    - label: Read report
-      url: https://drive.google.com/file/d/1HijS6-6f-ZSWZjqTCZIvWHUStWlssU2F/view?usp=share_link
 
 # Covid-19 Tracker
 - project: COVID‑19 Tracker
@@ -64,9 +52,6 @@
   highlights:
     - Implemented responsive dashboards for regional trends and per‑capita metrics.
     - Optimized API usage with memoized selectors and client‑side caching.
-  actions:
-    - label: Live demo
-      url: https://covid-19-tracker-356a7.web.app/
 
 # Object-oriented programming
 - project: Dungeon RPG Game
@@ -77,10 +62,7 @@
   highlights:
     - Applied Strategy, State, Composite, and Observer patterns to model combat and AI behaviors.
     - Maintained high cohesion/low coupling with testable modules and CI checks.
-  actions:
-    - label: Source code
-      url: https://github.com/yashR4J/object_oriented_design_and_programming/tree/main/project
- 
+
 # Webserver Backend 
 - project: Online Discussion Forum — Webserver Backend
   role: Team Lead & Primary Developer
@@ -90,9 +72,6 @@
   highlights:
     - Implemented token‑based authentication, session management, and role‑based permissions.
     - Delivered RESTful endpoints with unit/integration tests; top‑10% in 250‑student cohort.
-  actions:
-    - label: Source code
-      url: https://github.com/yashR4J/online_discussion_forum
 
 # R2R 
 - project: Robots to the Rescue — Design Project
@@ -103,6 +82,3 @@
   highlights:
     - Designed modular rescue robot with sensor fusion and fault‑tolerant control loops.
     - Authored systems analysis docs and presented at UNSW Virtual Showcase (top‑5 team).
-  actions:
-    - label: Design docs
-      url: https://unsw-my.sharepoint.com/:w:/g/personal/z5317349_ad_unsw_edu_au/EQiAUmjOB3hPsgbHMY_K1-8BM1hBEJBUt4e133WGMp0PLw?e=vMU7DK

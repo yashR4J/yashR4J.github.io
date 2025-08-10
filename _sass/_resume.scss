@@ -135,7 +135,14 @@
 .content-section {
   margin: 0 0 3rem;
 
-  .resume-item { margin-bottom: 2rem; }
+  .resume-item {
+    margin-bottom: 2rem;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    @include border-radius(12px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    padding: 16px 18px 14px 18px;
+  }
 
   .resume-item-title {
     @include sans_bold;
@@ -172,6 +179,47 @@
   }
 
   .resume-item-copy { margin: .75rem 0 0; }
+
+  // badges
+  .badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: .25rem 0 0 0;
+    list-style: none;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 9999px;
+    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    color: #111827;
+    font-size: .875rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  // project/links actions
+  .project-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #f8fafc;
+    color: #111827;
+    font-size: .875rem;
+    text-decoration: none;
+    @include transition(all .2s ease);
+  }
+  .btn:hover { background: #eef2f7; }
+  .btn-primary { background: #111827; color: #fff; border-color: #111827; }
 }
 
 // footer styles

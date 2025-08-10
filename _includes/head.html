@@ -6,36 +6,12 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   <!-- Google font typography settings - defined in _config.yml -->
-  {% if site.resume_theme == 'default' %}
   <link href='https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,800,700' rel='stylesheet' type='text/css'>
-  {% elsif site.resume_theme == 'modern' %}
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  {% endif %}
 
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="css/main.css">
-  <script>
-    // Simple theme toggle: switches between theme-modern and theme-default classes
-    document.addEventListener('DOMContentLoaded', function() {
-      var btn = document.getElementById('themeToggle');
-      var body = document.body;
-      try {
-        var saved = localStorage.getItem('resumeTheme');
-        if (saved) {
-          body.className = body.className.replace(/theme-(modern|default)/, 'theme-' + saved);
-        }
-      } catch (e) {}
-      if (btn) {
-        btn.addEventListener('click', function() {
-          var isModern = body.className.indexOf('theme-modern') !== -1;
-          var next = isModern ? 'default' : 'modern';
-          body.className = body.className.replace(/theme-(modern|default)/, 'theme-' + next);
-          try { localStorage.setItem('resumeTheme', next); } catch (e) {}
-        });
-      }
-    });
-  </script>
+  
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="icon" type="image/x-icon" href="favicon.png" />
 </head>
