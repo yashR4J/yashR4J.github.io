@@ -60,16 +60,12 @@
 
         {% for job in site.data.experience %}
         <div class="resume-item experience-card" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          {% if job.logo %}
-          <div class="experience-logo">
-            <img src="{{ job.logo }}" alt="{{ job.company }} logo" />
-          </div>
-          {% endif %}
-          <div class="experience-body">
-            <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
-            <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
-            <p class="resume-item-copy">{{ job.summary }}</p>
-          </div>
+          <h3 class="resume-item-title" itemprop="name">
+            {% if job.logo %}<img class="company-logo" src="{{ job.logo }}" alt="{{ job.company }} logo" />{% endif %}
+            {{ job.company }}
+          </h3>
+          <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
+          <p class="resume-item-copy">{{ job.summary }}</p>
         </div><!-- end of resume-item -->
         {% endfor %}
 
@@ -90,7 +86,7 @@
           <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>
           <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
           {% if education.awards %}
-          <ul class="badge-list" aria-label="Awards and honours">
+          <ul class="badge-list awards-list" aria-label="Awards and honours">
             {% for award in education.awards %}
             <li class="badge">{{ award.award }}</li>
             {% endfor %}

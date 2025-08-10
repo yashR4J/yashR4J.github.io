@@ -144,20 +144,16 @@
     padding: 16px 18px 14px 18px;
   }
 
-  // experience card with logo
-  .experience-card {
-    display: grid;
-    grid-template-columns: 56px 1fr;
-    grid-column-gap: 14px;
-    align-items: start;
-  }
-  .experience-logo img {
-    width: 56px;
-    height: 56px;
+  // company logo inline with title
+  .experience-card .company-logo {
+    width: 22px;
+    height: 22px;
     object-fit: contain;
-    display: block;
+    vertical-align: middle;
+    margin-right: 8px;
+    position: relative;
+    top: -2px;
   }
-  .experience-body { min-width: 0; }
 
   .resume-item-title {
     @include sans_bold;
@@ -208,14 +204,22 @@
   .badge {
     display: inline-flex;
     align-items: center;
-    padding: 6px 10px;
+    padding: 5px 9px;
     border-radius: 9999px;
     border: 1px solid #e5e7eb;
     background: #f8fafc;
     color: #111827;
-    font-size: .875rem;
+    font-size: .8rem;
     line-height: 1;
     white-space: nowrap;
+  }
+
+  // Award badges: smaller and allow wrapping
+  .awards-list { margin-top: .5rem; }
+  .awards-list .badge {
+    max-width: 100%;
+    white-space: normal; // allow multi-line wrapping
+    line-height: 1.2;
   }
 
   // project/links actions
