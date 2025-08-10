@@ -68,7 +68,7 @@
   role: Team Lead & Primary Developer
   duration: 2021
   url: https://github.com/yashR4J/online_discussion_forum
-  tech: [Python, Flask, JWT, Sessions, TDD]
+  tech: [Python, Flask]
   highlights:
     - Implemented token‑based authentication, session management, and role‑based permissions.
     - Delivered RESTful endpoints with unit/integration tests; top‑10% in 250‑student cohort.
@@ -78,7 +78,7 @@
   role: Team Lead & Primary Developer
   duration: 2020
   url: https://unsw-my.sharepoint.com/:w:/g/personal/z5317349_ad_unsw_edu_au/EQiAUmjOB3hPsgbHMY_K1-8BM1hBEJBUt4e133WGMp0PLw?e=vMU7DK
-  tech: [Arduino, C/C++, Sensors]
+  tech: [Arduino, C/C++]
   highlights:
     - Designed modular rescue robot with sensor fusion and fault‑tolerant control loops.
     - Authored systems analysis docs and presented at UNSW Virtual Showcase (top‑5 team).

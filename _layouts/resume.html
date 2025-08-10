@@ -59,10 +59,17 @@
         </header>
 
         {% for job in site.data.experience %}
-        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
-          <p class="resume-item-copy">{{ job.summary }}</p>
+        <div class="resume-item experience-card" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          {% if job.logo %}
+          <div class="experience-logo">
+            <img src="{{ job.logo }}" alt="{{ job.company }} logo" />
+          </div>
+          {% endif %}
+          <div class="experience-body">
+            <h3 class="resume-item-title" itemprop="name">{{ job.company }}</h3>
+            <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
+            <p class="resume-item-copy">{{ job.summary }}</p>
+          </div>
         </div><!-- end of resume-item -->
         {% endfor %}
 
