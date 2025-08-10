@@ -106,39 +106,48 @@
           <h2>Projects</h2>
         </header>
 
-        {% for project in site.data.projects %}
-        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
-
-          {% if project.tech %}
-            <ul class="badge-list">
-              {% for t in project.tech %}
-                <li class="badge">{{ t }}</li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-
-          {% if project.highlights %}
-            <ul class="resume-item-list">
-              {% for h in project.highlights %}
-                <li>{{ h }}</li>
-              {% endfor %}
-            </ul>
-          {% elsif project.description %}
-            <p class="resume-item-copy">{{ project.description }}</p>
-          {% endif %}
-
-          {% if project.actions %}
-            <div class="project-actions">
-              {% for a in project.actions %}
-                <a class="btn{% if forloop.first %} btn-primary{% endif %}" href="{{ a.url }}">{{ a.label }}</a>
-              {% endfor %}
+        <div class="projects-grid">
+          {% for project in site.data.projects %}
+          <article class="project-card" itemscope itemtype="http://schema.org/CreativeWork">
+            {% if project.image %}
+            <div class="project-media">
+              <img src="{{ project.image }}" alt="{{ project.project }} visual" />
             </div>
-          {% endif %}
+            {% endif %}
+            <div class="project-body">
+              <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
+              <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
+              <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
+
+              {% if project.tech %}
+                <ul class="badge-list">
+                  {% for t in project.tech %}
+                    <li class="badge">{{ t }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+
+              {% if project.highlights %}
+                <ul class="resume-item-list">
+                  {% for h in project.highlights %}
+                    <li>{{ h }}</li>
+                  {% endfor %}
+                </ul>
+              {% elsif project.description %}
+                <p class="resume-item-copy">{{ project.description }}</p>
+              {% endif %}
+
+              {% if project.actions %}
+                <div class="project-actions">
+                  {% for a in project.actions %}
+                    <a class="btn{% if forloop.first %} btn-primary{% endif %}" href="{{ a.url }}">{{ a.label }}</a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </article>
+          {% endfor %}
         </div>
-        {% endfor %}
 
       </section>
       <!-- end Projects -->
