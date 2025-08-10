@@ -236,9 +236,48 @@
     font-size: .875rem;
     text-decoration: none;
     @include transition(all .2s ease);
+    outline: none;
   }
   .btn:hover { background: #eef2f7; }
   .btn-primary { background: #111827; color: #fff; border-color: #111827; }
+
+  .btn:focus-visible,
+  a:focus-visible {
+    outline: 2px solid #111827;
+    outline-offset: 2px;
+  }
+}
+
+// Mobile accessibility and responsiveness
+@include media_mobile {
+  .wrapper { padding: 0 16px; }
+
+  .page-header {
+    .header-name { font-size: 2.25rem; }
+    .title-bar .header-title { font-size: 1.25rem; }
+  }
+
+  .content-section {
+    .resume-item { padding: 12px 12px 10px 12px; }
+    .resume-item-title { font-size: 1.25rem; }
+    .resume-item-details { font-size: 1rem; }
+  }
+
+  .projects-grid .project-media img { height: 120px; }
+
+  // Ensure company logo is small and well-aligned on mobile
+  .experience-card .company-logo {
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+    margin-right: 0;
+    vertical-align: middle;
+    position: static;
+    top: auto;
+  }
+
+  // Make badges slightly smaller to avoid wrapping issues
+  .badge { font-size: .78rem; padding: 4px 8px; }
 }
 
 // Projects grid/card styling (default theme)

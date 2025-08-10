@@ -64,6 +64,12 @@
   padding-left: $grid-gutter;
 }
 
+// Improve tap targets and spacing on small screens
+@include media_mobile {
+  .icon-links .icon { height: 32px; }
+  .contact-button { width: 100%; max-width: 420px; }
+}
+
 // Equal width columns via table sorcery.
 .table-column {
   display: table-cell;

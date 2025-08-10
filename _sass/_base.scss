@@ -14,15 +14,15 @@ body{
   @include serif;
   color: $text_color;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .wrapper:before,
 .wrapper:after { content:""; display:table; }
 .wrapper:after { clear: both; }
 .wrapper {
-  max-width: 728px;
-  padding: 0 24px;
+  max-width: 820px;
+  padding: 0 20px;
   margin: 0 auto;
   zoom: 1;
 }
