@@ -598,3 +598,256 @@ html {
     }
   }
 }
+
+// Courses section styling
+.courses-section {
+  margin-top: 1rem;
+  
+  .courses-toggle {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: var(--bg-primary);
+      border-color: var(--accent-color);
+    }
+    
+    &.active {
+      background: var(--accent-color);
+      color: white;
+      border-color: var(--accent-color);
+    }
+    
+    .toggle-icon {
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  .courses-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    animation: slideDown 0.3s ease;
+  }
+  
+  .course-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5rem;
+    
+    .course-item {
+      padding: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background: var(--bg-primary);
+        border-color: var(--accent-color);
+        color: var(--text-primary);
+      }
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Print styles for courses
+@media print {
+  .courses-toggle {
+    display: none !important;
+  }
+  
+  .courses-content {
+    display: block !important;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    
+    .course-list {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.25rem;
+    }
+    
+    .course-item {
+      font-size: 0.8rem;
+      padding: 0.25rem;
+    }
+  }
+}
+
+// Clubs section styling
+.clubs-section {
+  margin-top: 1rem;
+  
+  .clubs-toggle {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background: var(--bg-primary);
+      border-color: var(--accent-color);
+    }
+    
+    &.active {
+      background: var(--accent-color);
+      color: white;
+      border-color: var(--accent-color);
+    }
+    
+    .toggle-icon {
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  .clubs-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    animation: slideDown 0.3s ease;
+  }
+  
+  .clubs-grid {
+    display: grid;
+    gap: 1rem;
+    @include media_larger_than_mobile { 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+  
+  .club-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      box-shadow: 0 4px 12px var(--shadow-color);
+      border-color: var(--accent-color);
+    }
+  }
+  
+  .club-header {
+    margin-bottom: 0.75rem;
+    
+    .club-name {
+      @include sans_bold;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      margin: 0 0 0.5rem 0;
+    }
+    
+    .club-role {
+      display: inline-block;
+      background: var(--accent-color);
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+    }
+    
+    .club-year {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+  }
+  
+  .club-description {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.4;
+  }
+  
+  .club-achievements {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      padding: 0.25rem 0;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border-color);
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      &:before {
+        content: "•";
+        color: var(--accent-color);
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+// Print styles for clubs
+@media print {
+  .clubs-toggle {
+    display: none !important;
+  }
+  
+  .clubs-content {
+    display: block !important;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    
+    .clubs-grid {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    
+    .club-card {
+      padding: 0.75rem;
+    }
+    
+    .club-name {
+      font-size: 1rem;
+    }
+    
+    .club-achievements li {
+      font-size: 0.75rem;
+    }
+  }
+}

@@ -102,7 +102,58 @@
             {% endfor %}
           </ul>
           {% endif %}
-          <p class="resume-item-copy">{{ education.summary }}</p>
+          
+          {% if education.courses %}
+          <div class="courses-section">
+            <button class="btn btn-secondary courses-toggle" onclick="toggleCourses(this, '{{ forloop.index }}')">
+              <span class="toggle-text">Show Course List</span>
+              <svg class="toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </button>
+            
+            <div class="courses-content" id="courses-{{ forloop.index }}" style="display: none;">
+              <ul class="course-list">
+                {% for course in education.courses %}
+                <li class="course-item">{{ course }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endif %}
+          
+          {% if education.clubs %}
+          <div class="clubs-section">
+            <button class="btn btn-secondary clubs-toggle" onclick="toggleClubs(this, '{{ forloop.index }}')">
+              <span class="toggle-text">Show Clubs & Societies</span>
+              <svg class="toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </button>
+            
+            <div class="clubs-content" id="clubs-{{ forloop.index }}" style="display: none;">
+              <div class="clubs-grid">
+                {% for club in education.clubs %}
+                <div class="club-card">
+                  <div class="club-header">
+                    <h3 class="club-name">{{ club.name }}</h3>
+                    <span class="club-role">{{ club.role }}</span>
+                    <span class="club-year">{{ club.year }}</span>
+                  </div>
+                  <p class="club-description">{{ club.description }}</p>
+                  {% if club.achievements %}
+                  <ul class="club-achievements">
+                    {% for achievement in club.achievements %}
+                    <li>{{ achievement }}</li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
         </div>
         {% endfor %}
       </section>

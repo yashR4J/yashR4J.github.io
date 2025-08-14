@@ -4,11 +4,95 @@
   year: 2020 &mdash; 2023
   awards:
     - award: UNSW Faculty of Engineering Dean's Honours List (2020, 2021, 2022, 2023, 2024)
-  summary: Undergraduate Software Engineer, UNSW Sunswift Racing Technical Support Systems (Jan 2023-Dec 2023). Careers Subcommittee, UNSW CSESOC (2021-22); Research Subcommittee, UNSW Google Developers Student Club (2022-23)
+  courses:
+    - ELEC1111 Electrical & Telecommunication Engineering
+    - ENGG4999 Industrial Training
+    - MATH1141 Higher Mathematics 1A
+    - COMP1911 Computing 1A
+    - MATH1241 Higher Mathematics 1B
+    - PHYS1131 Higher Physics 1A
+    - COMP1521 Computer Systems Fundamentals
+    - ENGG1000 Engineering Design
+    - MATH1081 Discrete Mathematics
+    - COMP1531 Software Engineering Fundamentals
+    - COMP2521 Data Structures and Algorithms
+    - DESN2000 Engineering Design 2
+    - MATH2400 Finite Mathematics
+    - MATH2859 Probability, Statistics and Information
+    - COMP2511 Object-Oriented Design & Programming
+    - SENG2011 Program Reasoning Workshop
+    - COMP3331 Computer Networks & Applications
+    - COMP3821 Extended Algorithms & Programming Techniques
+    - COMP2041 Software Construction
+    - COMP3141 Software System Design & Implementation
+    - COMP3311 Database Systems
+    - COMP9444 Neural Networks, Deep Learning
+    - COMP3891 Extended Operating Systems
+    - ENGG4600 Engineering VIP
+    - SENG2021 Requirements & Design Workshop
+    - COMP4920 Professional Issues and Ethics
+    - COMP6841 Extended Security Engineering
+    - COMP6447 Security Assessment
+    - SENG3011 Software Engineering Workshop 3
+    - COMP4951 Research Thesis A
+    - COMP4952 Research Thesis B
+    - COMP4953 Research Thesis C
+  clubs:
+    - name: UNSW CSESOC
+      role: Careers Subcommittee Member
+      year: 2021-2022
+      description: Computer Science and Engineering Society - focused on career development and industry connections for CS/Engineering students
+      achievements:
+        - Organized career workshops and networking events
+        - Facilitated industry partnerships and internship opportunities
+        - Mentored junior students in career planning
+    - name: UNSW Google Developers Student Club
+      role: Research Subcommittee Member
+      year: 2022-2023
+      description: Google-sponsored student organization promoting technology innovation and research
+      achievements:
+        - Led research initiatives and technical workshops
+        - Organized hackathons and coding competitions
+        - Mentored students in emerging technologies
 
 - degree: Bachelor of Commerce (Finance)
   uni: University of New South Wales
   year: 2020 &mdash; 2024
   awards:
     - award: UNSW Business School Dean's Award for Academic Excellence - Stage 3 (2021)
-  summary: UNSW FINSOC (2021); UNSW Consulting Club (2021);
+  courses:
+    - ECON1101 Microeconomics 1
+    - ACCT1501 Accounting & Financial Management 1A
+    - COMM6000 CA Essentials
+    - ECON1102 Macroeconomics 1
+    - MGMT1001 Managing Organisations & People
+    - FINS1613 Business Finance
+    - MATH1081 Discrete Mathematics
+    - COMM1000 Creating Social Change
+    - FINS2624 Portfolio Management
+    - FINS3616 International Business Finance
+    - FINS2643 Wealth Management & Client Engagement
+    - INFS1602 Digital Transformation in Business
+    - FINS2618 Capital Markets & Institutions
+    - FINS2622 Asia-Pacific Capital Markets
+    - FINS3655 Behavioural Finance
+    - ECON2101 Microeconomics 2
+    - FINS3625 Applied Corporate Finance
+    - FINS3623 Venture Capital
+  clubs:
+    - name: UNSW FINSOC
+      role: Member
+      year: 2021
+      description: Finance Society - professional development and networking for finance students
+      achievements:
+        - Participated in finance case study competitions
+        - Attended industry networking events
+        - Gained insights into financial markets and career paths
+    - name: UNSW Consulting Club
+      role: Member
+      year: 2021
+      description: Consulting-focused student organization providing consulting experience and industry exposure
+      achievements:
+        - Participated in consulting case competitions
+        - Developed problem-solving and analytical skills
+        - Networked with consulting professionals

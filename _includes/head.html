@@ -51,5 +51,43 @@
         }
       }
     })();
+    
+    // Courses toggle functionality
+    function toggleCourses(button, index) {
+      const coursesContent = document.getElementById('courses-' + index);
+      const toggleText = button.querySelector('.toggle-text');
+      const toggleIcon = button.querySelector('.toggle-icon');
+      
+      if (coursesContent.style.display === 'none') {
+        coursesContent.style.display = 'block';
+        toggleText.textContent = 'Hide Course List';
+        toggleIcon.style.transform = 'rotate(180deg)';
+        button.classList.add('active');
+      } else {
+        coursesContent.style.display = 'none';
+        toggleText.textContent = 'Show Course List';
+        toggleIcon.style.transform = 'rotate(0deg)';
+        button.classList.remove('active');
+      }
+    }
+    
+    // Clubs toggle functionality
+    function toggleClubs(button, index) {
+      const clubsContent = document.getElementById('clubs-' + index);
+      const toggleText = button.querySelector('.toggle-text');
+      const toggleIcon = button.querySelector('.toggle-icon');
+      
+      if (clubsContent.style.display === 'none') {
+        clubsContent.style.display = 'block';
+        toggleText.textContent = 'Hide Clubs & Societies';
+        toggleIcon.style.transform = 'rotate(180deg)';
+        button.classList.add('active');
+      } else {
+        clubsContent.style.display = 'none';
+        toggleText.textContent = 'Show Clubs & Societies';
+        toggleIcon.style.transform = 'rotate(0deg)';
+        button.classList.remove('active');
+      }
+    }
   </script>
 </head>
