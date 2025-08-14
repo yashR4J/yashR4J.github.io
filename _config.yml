@@ -50,7 +50,7 @@ resume_social_links:
   # resume_facebook_url:          "insert Facebook URL here"
   resume_linkedin_url:          "https://www.linkedin.com/in/yash-raj-54372a187/"
   resume_instagram_url:         "https://www.instagram.com/__yash.r4j/"
-  resume_website_url:           "https://yashr4j.github.io/"
+  # resume_website_url:           "https://yashr4j.github.io/"
   # resume_medium_url:            "insert Medium URL here"
 resume_print_social_links:      true
 
