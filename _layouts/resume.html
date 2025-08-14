@@ -92,9 +92,33 @@
         </header>
 
         {% for education in site.data.education %}
-        <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
-          <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>
-          <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
+        <div class="resume-item education-card" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
+          <div class="education-header">
+            <div class="education-info">
+              <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>
+              <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
+            </div>
+            <div class="education-actions">
+              {% if education.courses %}
+              <button class="icon-btn courses-btn" onclick="toggleCoursesHover(this, '{{ forloop.index }}')" aria-label="Show course list">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </button>
+              {% endif %}
+              {% if education.clubs %}
+              <button class="icon-btn clubs-btn" onclick="toggleClubsHover(this, '{{ forloop.index }}')" aria-label="Show clubs & societies">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </button>
+              {% endif %}
+            </div>
+          </div>
+          
           {% if education.awards %}
           <ul class="badge-list awards-list" aria-label="Awards and honours">
             {% for award in education.awards %}
@@ -104,49 +128,53 @@
           {% endif %}
           
           {% if education.courses %}
-          <div class="courses-section">
-            <button class="btn btn-secondary courses-toggle" onclick="toggleCourses(this, '{{ forloop.index }}')">
-              <span class="toggle-text">Show Course List</span>
-              <svg class="toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6,9 12,15 18,9"></polyline>
-              </svg>
-            </button>
-            
-            <div class="courses-content" id="courses-{{ forloop.index }}" style="display: none;">
-              <ul class="course-list">
+          <div class="hover-card courses-hover" id="courses-hover-{{ forloop.index }}">
+            <div class="hover-card-header">
+              <h4>Course List</h4>
+              <button class="close-btn" onclick="closeHoverCard('courses-hover-{{ forloop.index }}')" aria-label="Close">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="hover-card-content">
+              <div class="courses-grid">
                 {% for course in education.courses %}
-                <li class="course-item">{{ course }}</li>
+                <div class="course-badge">{{ course }}</div>
                 {% endfor %}
-              </ul>
+              </div>
             </div>
           </div>
           {% endif %}
           
           {% if education.clubs %}
-          <div class="clubs-section">
-            <button class="btn btn-secondary clubs-toggle" onclick="toggleClubs(this, '{{ forloop.index }}')">
-              <span class="toggle-text">Show Clubs & Societies</span>
-              <svg class="toggle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6,9 12,15 18,9"></polyline>
-              </svg>
-            </button>
-            
-            <div class="clubs-content" id="clubs-{{ forloop.index }}" style="display: none;">
+          <div class="hover-card clubs-hover" id="clubs-hover-{{ forloop.index }}">
+            <div class="hover-card-header">
+              <h4>Clubs & Societies</h4>
+              <button class="close-btn" onclick="closeHoverCard('clubs-hover-{{ forloop.index }}')" aria-label="Close">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+            <div class="hover-card-content">
               <div class="clubs-grid">
                 {% for club in education.clubs %}
-                <div class="club-card">
+                <div class="club-item">
                   <div class="club-header">
-                    <h3 class="club-name">{{ club.name }}</h3>
+                    <h5 class="club-name">{{ club.name }}</h5>
                     <span class="club-role">{{ club.role }}</span>
                     <span class="club-year">{{ club.year }}</span>
                   </div>
                   <p class="club-description">{{ club.description }}</p>
                   {% if club.achievements %}
-                  <ul class="club-achievements">
+                  <div class="club-achievements">
                     {% for achievement in club.achievements %}
-                    <li>{{ achievement }}</li>
+                    <div class="achievement-badge">{{ achievement }}</div>
                     {% endfor %}
-                  </ul>
+                  </div>
                   {% endif %}
                 </div>
                 {% endfor %}

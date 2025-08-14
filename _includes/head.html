@@ -89,5 +89,41 @@
         button.classList.remove('active');
       }
     }
+    
+    // Hover card functionality
+    function toggleCoursesHover(button, index) {
+      const hoverCard = document.getElementById('courses-hover-' + index);
+      const allHoverCards = document.querySelectorAll('.hover-card');
+      
+      // Close all other hover cards first
+      allHoverCards.forEach(card => {
+        if (card !== hoverCard) {
+          card.classList.remove('active');
+        }
+      });
+      
+      // Toggle current hover card
+      hoverCard.classList.toggle('active');
+    }
+    
+    function toggleClubsHover(button, index) {
+      const hoverCard = document.getElementById('clubs-hover-' + index);
+      const allHoverCards = document.querySelectorAll('.hover-card');
+      
+      // Close all other hover cards first
+      allHoverCards.forEach(card => {
+        if (card !== hoverCard) {
+          card.classList.remove('active');
+        }
+      });
+      
+      // Toggle current hover card
+      hoverCard.classList.toggle('active');
+    }
+    
+    function closeHoverCard(cardId) {
+      const hoverCard = document.getElementById(cardId);
+      hoverCard.classList.remove('active');
+    }
   </script>
 </head>
