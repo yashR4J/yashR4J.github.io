@@ -9,10 +9,10 @@
 
 # Private Tutor
 - company: UNSW - Faculty of Engineering and Computer Science
-  position: Casual Academic
+  position: Casual Academic (Tutor)
   duration: February, 2023 &mdash; December, 2023
   logo: images/unsw.png
-  summary: Tutor for Data Structures and Algorithms (23T1, 23T2, 23T3).
+  summary: Delivered tutorials, labs, and assessment support for COMP2521 Data Structures and Algorithms (23T1–23T3). Taught algorithm analysis and core data structures (linked lists, trees, graphs, hash tables), sorting/searching, and algorithmic strategies in C on Unix. Facilitated weekly programming labs, live code reviews, and exam prep; marked assignments with rigorous rubric-based feedback. Supported 150+ students across streams, improving cohort outcomes and course satisfaction.
 
 # Software Internship
 - company: Sunswift Racing

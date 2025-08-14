@@ -1,8 +1,10 @@
 # Degree
 - degree: Bachelor of Software Engineering
   uni: University of New South Wales
-  year: 2020 &mdash; 2023
+  year: 2020 &mdash; 2024
   logo: /images/unsw.png
+  honours: true
+  honours_label: First Class Honours
   awards:
     - award: UNSW Faculty of Engineering Dean's Honours List (2020, 2021, 2022, 2023, 2024)
   courses:
