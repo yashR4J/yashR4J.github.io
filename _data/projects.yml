@@ -11,6 +11,16 @@
     - Surfaced QoS/QoE metrics (setup latency, media bitrate, call abandonment) to pinpoint bottlenecks across access and core networks.
     - Enabled data‑driven QoS policy tuning and capacity planning for enterprise networks in collaboration with Canopus Networks.
 
+# Fuzzer
+- project: Multi-Format Security Testing Fuzzer with Crash Analysis
+  role: Team Lead & Primary Developer
+  duration: 2024
+  url: https://github.com/Domin0de/COMP6447-beedrill
+  tech: [Python, C]
+  highlights:
+    - Developed a modular, multi-format fuzzer with 20+ mutation strategies, intelligent crash detection, and ltrace-based code coverage visualization
+    - Optimized vulnerability discovery through file-specific fuzzers and function call analysis
+    
 # Finance Event Intelligence Platform
 - project: Finance Event Intelligence Platform
   role: Product Owner, Lead Backend Engineer
@@ -82,13 +92,3 @@
   highlights:
     - Designed modular rescue robot with sensor fusion and fault‑tolerant control loops.
     - Authored systems analysis docs and presented at UNSW Virtual Showcase (top‑5 team).
-
-# Fuzzer
-- project: Multi-Format Security Testing Fuzzer with Crash Analysis
-  role: Team Lead & Primary Developer
-  duration: 2024
-  url: https://github.com/Domin0de/COMP6447-beedrill
-  tech: [Python, C]
-  highlights:
-    - Developed a modular, multi-format fuzzer with 20+ mutation strategies, intelligent crash detection, and ltrace-based code coverage visualization
-    - Optimized vulnerability discovery through file-specific fuzzers and function call analysis
