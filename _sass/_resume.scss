@@ -393,6 +393,97 @@ html {
   .page-footer {
     color: var(--text-muted);
   }
+  
+  // Dark mode overrides for education cards and hover elements
+  .education-card {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    
+    .icon-btn {
+      background-color: var(--bg-secondary);
+      border-color: var(--border-color);
+      color: var(--text-muted);
+      
+      &:hover {
+        background-color: var(--accent-color);
+        color: white;
+        border-color: var(--accent-color);
+      }
+    }
+  }
+  
+  .hover-card {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    box-shadow: 0 8px 32px var(--shadow-color);
+    
+    .hover-card-header {
+      border-bottom-color: var(--border-color);
+      
+      h4 {
+        color: var(--text-primary);
+      }
+      
+      .close-btn {
+        color: var(--text-muted);
+        
+        &:hover {
+          background-color: var(--bg-secondary);
+          color: var(--text-primary);
+        }
+      }
+    }
+    
+    .hover-card-content {
+      background-color: var(--bg-card);
+    }
+  }
+  
+  .courses-hover {
+    .course-badge {
+      background-color: var(--bg-secondary);
+      border-color: var(--border-color);
+      color: var(--text-primary);
+      
+      &:hover {
+        background-color: var(--accent-color);
+        color: white;
+        border-color: var(--accent-color);
+      }
+    }
+  }
+  
+  .clubs-hover {
+    .club-item {
+      background-color: var(--bg-secondary);
+      border-color: var(--border-color);
+      
+      &:hover {
+        border-color: var(--accent-color);
+        box-shadow: 0 2px 8px var(--shadow-color);
+      }
+      
+      .club-name {
+        color: var(--text-primary);
+      }
+      
+      .club-description {
+        color: var(--text-secondary);
+      }
+      
+      .achievement-badge {
+        background-color: var(--bg-card);
+        border-color: var(--border-color);
+        color: var(--text-muted);
+        
+        &:hover {
+          background-color: var(--accent-color);
+          color: white;
+          border-color: var(--accent-color);
+        }
+      }
+    }
+  }
 }
 
 // Theme toggle button
@@ -439,6 +530,11 @@ html {
   background: rgba(26, 26, 46, 0.9);
   border-color: var(--border-color);
   color: #e8e8e8;
+  
+  &:hover {
+    background: rgba(26, 26, 46, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
   
   .sun-icon {
     display: block;

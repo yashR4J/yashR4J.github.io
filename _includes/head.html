@@ -52,6 +52,35 @@
       }
     })();
     
+    // Click outside handler to close hover cards
+    document.addEventListener('click', function(event) {
+      const hoverCards = document.querySelectorAll('.hover-card.active');
+      const iconButtons = document.querySelectorAll('.icon-btn');
+      
+      // Check if click is outside hover cards and not on icon buttons
+      let clickedOnCard = false;
+      let clickedOnButton = false;
+      
+      hoverCards.forEach(card => {
+        if (card.contains(event.target)) {
+          clickedOnCard = true;
+        }
+      });
+      
+      iconButtons.forEach(button => {
+        if (button.contains(event.target)) {
+          clickedOnButton = true;
+        }
+      });
+      
+      // Close all hover cards if clicking outside
+      if (!clickedOnCard && !clickedOnButton) {
+        hoverCards.forEach(card => {
+          card.classList.remove('active');
+        });
+      }
+    });
+    
     // Courses toggle functionality
     function toggleCourses(button, index) {
       const coursesContent = document.getElementById('courses-' + index);
