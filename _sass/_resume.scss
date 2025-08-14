@@ -218,6 +218,17 @@ html {
     top: -2px;
   }
 
+  // club logo styling
+  .club-logo {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 6px;
+    position: relative;
+    top: -1px;
+  }
+
   .resume-item-title {
     @include sans_bold;
     margin: 0 0 .75rem;
@@ -482,6 +493,30 @@ html {
           border-color: var(--accent-color);
         }
       }
+    }
+  }
+  
+  // Dark mode overrides for icon links
+  .icon-links {
+    .icon-link {
+      &:hover .icon path {
+        fill: var(--accent-color);
+      }
+    }
+  }
+  
+  // Dark mode overrides for page header
+  .page-header {
+    background-color: var(--bg-secondary);
+    border-bottom-color: var(--border-color);
+  }
+  
+  // Dark mode overrides for section headers
+  .section-header {
+    border-bottom-color: var(--border-color);
+    
+    h2 {
+      color: var(--text-primary);
     }
   }
 }
@@ -1183,6 +1218,18 @@ html {
       .education-actions {
         margin-left: 0;
         margin-top: 1rem;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+    }
+    
+    .icon-btn {
+      width: 32px;
+      height: 32px;
+      
+      svg {
+        width: 14px;
+        height: 14px;
       }
     }
   }
@@ -1198,6 +1245,19 @@ html {
     &.active {
       transform: translate(-50%, -50%);
     }
+  }
+  
+  // Mobile adjustments for company and club logos
+  .company-logo {
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 6px !important;
+  }
+  
+  .club-logo {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 4px !important;
   }
 }
 

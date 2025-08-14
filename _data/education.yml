@@ -41,6 +41,7 @@
     - name: UNSW CSESOC
       role: Careers Subcommittee Member
       year: 2021-2022
+      logo: /images/csesoc.jpg
       description: Computer Science and Engineering Society - focused on career development and industry connections for CS/Engineering students
       achievements:
         - Organized career workshops and networking events
@@ -49,6 +50,7 @@
     - name: UNSW Google Developers Student Club
       role: Research Subcommittee Member
       year: 2022-2023
+      logo: /images/gdsc.jpg
       description: Google-sponsored student organization promoting technology innovation and research
       achievements:
         - Led research initiatives and technical workshops
@@ -81,16 +83,19 @@
     - FINS3623 Venture Capital
   clubs:
     - name: UNSW FINSOC
-      role: Member
+      role: Research Subcommittee Member
       year: 2021
+      logo: /images/finsoc.png
       description: Finance Society - professional development and networking for finance students
       achievements:
-        - Participated in finance case study competitions
-        - Attended industry networking events
-        - Gained insights into financial markets and career paths
+        - Provided weekly business news wraps and financial market insights
+        - Wrote financial articles on relevant case studies and market analysis
+        - Collaborated on equity research reports for Business school students
+        - Contributed to student education and enrichment in financial services
     - name: UNSW Consulting Club
       role: Member
       year: 2021
+      logo: /images/unsw_consulting_club.png
       description: Consulting-focused student organization providing consulting experience and industry exposure
       achievements:
         - Participated in consulting case competitions

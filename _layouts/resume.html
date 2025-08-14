@@ -164,7 +164,10 @@
                 {% for club in education.clubs %}
                 <div class="club-item">
                   <div class="club-header">
-                    <h5 class="club-name">{{ club.name }}</h5>
+                    <h5 class="club-name">
+                      {% if club.logo %}<img class="club-logo" src="{{ club.logo }}" alt="{{ club.name }} logo" />{% endif %}
+                      {{ club.name }}
+                    </h5>
                     <span class="club-role">{{ club.role }}</span>
                     <span class="club-year">{{ club.year }}</span>
                   </div>
@@ -295,7 +298,10 @@
 
         {% for association in site.data.associations %}
         <div class="resume-item" itemscope itemprop="memberOf" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">{% if association.url %}<a href="{{ association.url }}">{{ association.organization }}</a>{% else %}{{ association.organization }}{% endif %}</h3>
+          <h3 class="resume-item-title" itemprop="name">
+            {% if association.logo %}<img class="company-logo" src="{{ association.logo }}" alt="{{ association.organization }} logo" />{% endif %}
+            {% if association.url %}<a href="{{ association.url }}">{{ association.organization }}</a>{% else %}{{ association.organization }}{% endif %}
+          </h3>
           <h4 class="resume-item-details" itemprop="description">{{ association.role }} &bull; {{ association.year }}</h4>
           <p class="resume-item-copy">{{ association.summary }}</p>
         </div>
