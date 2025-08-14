@@ -95,8 +95,16 @@
         <div class="resume-item education-card" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
           <div class="education-header">
             <div class="education-info">
-              <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>
+              <h3 class="resume-item-title" itemprop="name">
+                {% if education.logo %}<img class="company-logo" src="{{ education.logo }}" alt="{{ education.uni }} logo" />{% endif %}
+                {{ education.uni }}
+              </h3>
               <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
+              {% if education.degree contains "First Class Honours" %}
+              <ul class="badge-list">
+                <li class="badge honours-badge">First Class Honours</li>
+              </ul>
+              {% endif %}
             </div>
             <div class="education-actions">
               {% if education.courses %}
@@ -279,7 +287,10 @@
         {% for recognition in site.data.recognitions %}
         <div class="resume-item">
           <h3 class="resume-item-title" itemprop="award">{{ recognition.award }}</h3>
-          <h4 class="resume-item-details">{{ recognition.organization }} &bull; {{ recognition.year }}</h4>
+          <h4 class="resume-item-details">
+            {% if recognition.logo %}<img class="company-logo" src="{{ recognition.logo }}" alt="{{ recognition.organization }} logo" />{% endif %}
+            {{ recognition.organization }} &bull; {{ recognition.year }}
+          </h4>
           <p class="resume-item-copy">{{ recognition.summary }}</p>
         </div>
         {% endfor %}

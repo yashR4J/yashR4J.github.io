@@ -1,7 +1,8 @@
 # Degree
-- degree: Bachelor of Software Engineering (First Class Honours)
+- degree: Bachelor of Software Engineering
   uni: University of New South Wales
   year: 2020 &mdash; 2023
+  logo: /images/unsw.png
   awards:
     - award: UNSW Faculty of Engineering Dean's Honours List (2020, 2021, 2022, 2023, 2024)
   courses:
@@ -48,18 +49,19 @@
         - Facilitated industry partnerships and internship opportunities
         - Mentored junior students in career planning
     - name: UNSW Google Developers Student Club
-      role: Research Subcommittee Member
+      role: Member
       year: 2022-2023
       logo: /images/gdsc.jpg
       description: Google-sponsored student organization promoting technology innovation and research
       achievements:
-        - Led research initiatives and technical workshops
-        - Organized hackathons and coding competitions
-        - Mentored students in emerging technologies
+        - Participated in technical workshops and hackathons
+        - Learned emerging technologies and development practices
+        - Collaborated with peers on innovative projects
 
 - degree: Bachelor of Commerce (Finance)
   uni: University of New South Wales
   year: 2020 &mdash; 2024
+  logo: /images/unsw.png
   awards:
     - award: UNSW Business School Dean's Award for Academic Excellence - Stage 3 (2021)
   courses:

@@ -218,6 +218,17 @@ html {
     top: -2px;
   }
 
+  // association logo styling (same as company logo)
+  .resume-item .company-logo {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 8px;
+    position: relative;
+    top: -2px;
+  }
+
   // club logo styling
   .club-logo {
     width: 18px;
@@ -302,6 +313,16 @@ html {
     line-height: 1.2;
   }
 
+  // Honours badge styling
+  .honours-badge {
+    font-weight: bold !important;
+    background: var(--accent-color) !important;
+    color: white !important;
+    border-color: var(--accent-color) !important;
+    font-size: 0.85rem !important;
+    padding: 6px 12px !important;
+  }
+
   // project/links actions
   .project-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
   .btn {
@@ -356,6 +377,12 @@ html {
     background-color: var(--bg-secondary);
     color: var(--text-primary);
     border-color: var(--border-color);
+  }
+  
+  .honours-badge {
+    background: var(--accent-color) !important;
+    color: white !important;
+    border-color: var(--accent-color) !important;
   }
   
   .skill-card {
@@ -1219,17 +1246,21 @@ html {
         margin-left: 0;
         margin-top: 1rem;
         flex-wrap: wrap;
-        gap: 6px;
+        gap: 8px;
+        width: 100%;
+        justify-content: flex-start;
       }
     }
     
     .icon-btn {
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
       
       svg {
-        width: 14px;
-        height: 14px;
+        width: 18px;
+        height: 18px;
       }
     }
   }
