@@ -100,18 +100,6 @@
                 {{ education.uni }}
               </h3>
               <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
-              {% if education.honours or education.honours_label or education.badges %}
-              <ul class="badge-list">
-                {% if education.honours or education.honours_label %}
-                <li class="badge honours-badge">{{ education.honours_label | default: "First Class Honours" }}</li>
-                {% endif %}
-                {% if education.badges %}
-                  {% for b in education.badges %}
-                    <li class="badge">{{ b }}</li>
-                  {% endfor %}
-                {% endif %}
-              </ul>
-              {% endif %}
             </div>
             <div class="education-actions">
               {% if education.courses %}
@@ -134,11 +122,21 @@
             </div>
           </div>
           
-          {% if education.awards %}
+          {% if education.awards or education.honours or education.honours_label or education.badges %}
           <ul class="badge-list awards-list" aria-label="Awards and honours">
-            {% for award in education.awards %}
-            <li class="badge">{{ award.award }}</li>
-            {% endfor %}
+            {% if education.honours or education.honours_label %}
+            <li class="badge honours-badge">{{ education.honours_label | default: "First Class Honours" }}</li>
+            {% endif %}
+            {% if education.badges %}
+              {% for b in education.badges %}
+              <li class="badge">{{ b }}</li>
+              {% endfor %}
+            {% endif %}
+            {% if education.awards %}
+              {% for award in education.awards %}
+              <li class="badge">{{ award.award }}</li>
+              {% endfor %}
+            {% endif %}
           </ul>
           {% endif %}
           
@@ -293,11 +291,11 @@
 
         {% for recognition in site.data.recognitions %}
         <div class="resume-item">
-          <h3 class="resume-item-title" itemprop="award">{{ recognition.award }}</h3>
-          <h4 class="resume-item-details">
-            {% if recognition.logo %}<img class="company-logo" src="{{ recognition.logo }}" alt="{{ recognition.organization }} logo" />{% endif %}
-            {{ recognition.organization }} &bull; {{ recognition.year }}
-          </h4>
+          <h3 class="resume-item-title" itemprop="award">
+            {% if recognition.logo %}<img class="company-logo" src="{{ recognition.logo }}" alt="{{ recognition.award }} logo" />{% endif %}
+            {{ recognition.award }}
+          </h3>
+          <h4 class="resume-item-details">{{ recognition.organization }} &bull; {{ recognition.year }}</h4>
           <p class="resume-item-copy">{{ recognition.summary }}</p>
         </div>
         {% endfor %}

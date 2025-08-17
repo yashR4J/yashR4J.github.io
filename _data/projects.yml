@@ -90,5 +90,5 @@
   url: https://unsw-my.sharepoint.com/:w:/g/personal/z5317349_ad_unsw_edu_au/EQiAUmjOB3hPsgbHMY_K1-8BM1hBEJBUt4e133WGMp0PLw?e=vMU7DK
   tech: [Arduino, C/C++]
   highlights:
-    - Designed modular rescue robot with sensor fusion and fault‑tolerant control loops.
-    - Authored systems analysis docs and presented at UNSW Virtual Showcase (top‑5 team).
+    - Engineered a modular rescue robot with Arduino-based user control, obstacle mapping, and fault-tolerant control systems
+    - Produced systems design documentation and showcased project at the UNSW Virtual Showcase (top-5 team selection)
