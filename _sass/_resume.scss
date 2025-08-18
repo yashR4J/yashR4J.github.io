@@ -77,7 +77,9 @@ html {
 
 // page header styles
 
-.page-header { padding: 1.5rem 0;
+.page-header { 
+  padding: 1.5rem 0;
+  background: var(--bg-primary);
 
   .avatar {
     width: 95px;
@@ -567,7 +569,7 @@ html {
   
   // Dark mode overrides for page header
   .page-header {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
     border-bottom-color: var(--border-color);
   }
   
@@ -650,10 +652,12 @@ html {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    width: 56px !important;
+    height: 56px !important;
     
     .theme-icon {
-      width: 20px !important;
-      height: 20px !important;
+      width: 28px !important;
+      height: 28px !important;
     }
   }
 }
