@@ -450,6 +450,94 @@ html {
     }
   }
   
+  // Experience card header styles
+  .experience-card {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+      
+      .experience-info {
+        flex: 1;
+      }
+      
+      .experience-actions {
+        display: flex;
+        gap: 8px;
+        margin-left: 12px;
+      }
+    }
+    
+    .icon-btn {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: var(--text-muted);
+      
+      &:hover {
+        background-color: var(--accent-color);
+        color: white;
+        border-color: var(--accent-color);
+      }
+      
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  
+  // Project card header styles
+  .project-card {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+      
+      .project-info {
+        flex: 1;
+      }
+      
+      .project-actions {
+        display: flex;
+        gap: 8px;
+        margin-left: 12px;
+      }
+    }
+    
+    .icon-btn {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: var(--text-muted);
+      
+      &:hover {
+        background-color: var(--accent-color);
+        color: white;
+        border-color: var(--accent-color);
+      }
+      
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  
   .hover-card {
     background-color: var(--bg-card);
     border-color: var(--border-color);
@@ -520,6 +608,79 @@ html {
           border-color: var(--accent-color);
         }
       }
+    }
+  }
+  
+  // Details hover card styles
+  .details-hover {
+    .job-summary {
+      color: var(--text-primary);
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    .summary-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      .summary-item {
+        color: var(--text-primary);
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
+        padding-left: 1rem;
+        position: relative;
+        
+        &:before {
+          content: "•";
+          color: var(--accent-color);
+          font-weight: bold;
+          position: absolute;
+          left: 0;
+        }
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  // Highlights hover card styles
+  .highlights-hover {
+    .highlights-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      .highlight-item {
+        color: var(--text-primary);
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
+        padding-left: 1rem;
+        position: relative;
+        
+        &:before {
+          content: "•";
+          color: var(--accent-color);
+          font-weight: bold;
+          position: absolute;
+          left: 0;
+        }
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  // Description hover card styles
+  .description-hover {
+    .project-description {
+      color: var(--text-primary);
+      line-height: 1.6;
+      margin: 0;
     }
   }
   
@@ -1066,6 +1227,118 @@ html {
   }
 }
 
+// Experience card styling with icon buttons
+.experience-card {
+  position: relative;
+  
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    
+    .experience-info {
+      flex: 1;
+      
+      .resume-item-title {
+        margin-bottom: 0.5rem;
+      }
+      
+      .resume-item-details {
+        margin-bottom: 0;
+      }
+    }
+    
+    .experience-actions {
+      display: flex;
+      gap: 8px;
+      margin-left: 1rem;
+    }
+  }
+  
+  .icon-btn {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-muted);
+    
+    &:hover {
+      background: var(--accent-color);
+      color: white;
+      border-color: var(--accent-color);
+      transform: scale(1.1);
+    }
+    
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+// Project card styling with icon buttons
+.project-card {
+  position: relative;
+  
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    
+    .project-info {
+      flex: 1;
+      
+      .resume-item-title {
+        margin-bottom: 0.5rem;
+      }
+      
+      .resume-item-details {
+        margin-bottom: 0;
+      }
+    }
+    
+    .project-actions {
+      display: flex;
+      gap: 8px;
+      margin-left: 1rem;
+    }
+  }
+  
+  .icon-btn {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-muted);
+    
+    &:hover {
+      background: var(--accent-color);
+      color: white;
+      border-color: var(--accent-color);
+      transform: scale(1.1);
+    }
+    
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
 // Hover card styling
 .hover-card {
   position: absolute;
@@ -1243,6 +1516,62 @@ html {
       align-items: flex-start;
       
       .education-actions {
+        margin-left: 0;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+    
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
+      
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  
+  .experience-card {
+    .experience-header {
+      flex-direction: column;
+      align-items: flex-start;
+      
+      .experience-actions {
+        margin-left: 0;
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+    
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      min-height: 40px;
+      
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  
+  .project-card {
+    .project-header {
+      flex-direction: column;
+      align-items: flex-start;
+      
+      .project-actions {
         margin-left: 0;
         margin-top: 1rem;
         flex-wrap: wrap;

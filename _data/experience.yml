@@ -5,25 +5,38 @@
   position: Software Engineer
   duration: February, 2023 &mdash; Present
   logo: images/wisetech.png
-  summary: Designed and implemented scalable solutions to enhance the reliability, performance, and self-service capabilities of cloud-hosted systems, reducing operational overhead and improving user experience. Automated critical infrastructure processes, including disaster recovery, system monitoring, and data resilience, ensuring high availability and seamless functionality across global cloud platforms. Mentored 30+ students in WiseTech's Earn and Learn Program, providing programming assistance, workshops, and contributing to curriculum development.
+  summary:
+    - Designed and implemented scalable solutions to enhance the reliability, performance, and self-service capabilities of cloud-hosted systems, reducing operational overhead and improving user experience
+    - Automated critical infrastructure processes, including disaster recovery, system monitoring, and data resilience, ensuring high availability and seamless functionality across global cloud platforms
+    - Mentored 30+ students in WiseTech's Earn and Learn Program, providing programming assistance, workshops, and contributing to curriculum development
 
 # Private Tutor
 - company: UNSW - Faculty of Engineering and Computer Science
   position: Casual Academic (Tutor)
   duration: February, 2023 &mdash; December, 2023
   logo: images/unsw.png
-  summary: Delivered tutorials, labs, and assessment support for COMP2521 Data Structures and Algorithms (23T1–23T3). Taught algorithm analysis and core data structures (linked lists, trees, graphs, hash tables), sorting/searching, and algorithmic strategies in C on Unix. Facilitated weekly programming labs, live code reviews, and exam prep; marked assignments with rigorous rubric-based feedback. Supported 150+ students across streams, improving cohort outcomes and course satisfaction.
+  summary:
+    - Delivered tutorials, labs, and assessment support for COMP2521 Data Structures and Algorithms (23T1–23T3)
+    - Taught algorithm analysis and core data structures (linked lists, trees, graphs, hash tables), sorting/searching, and algorithmic strategies in C on Unix
+    - Facilitated weekly programming labs, live code reviews, and exam prep; marked assignments with rigorous rubric-based feedback
+    - Supported 150+ students across streams, improving cohort outcomes and course satisfaction
 
 # Software Internship
 - company: Sunswift Racing
   position: Technical Team Lead (Internal Tools)
   duration: January, 2023 &mdash; January, 2024
   logo: images/sunswift.png
-  summary: Contributed to the design and development of an ERP software as part of the Internal Tools team, facilitating a smooth transition from legacy spreadsheets to a cohesive and integrated environment. Engaged in full-stack development to ensure a comprehensive and user-friendly ERP system. Collaborated effectively with various departments, facilitating seamless communication and understanding of requirements. Contributed significantly to improving overall team productivity by providing advanced tools for data analysis and reporting.
+  summary:
+    - Contributed to the design and development of an ERP software as part of the Internal Tools team, facilitating a smooth transition from legacy spreadsheets to a cohesive and integrated environment
+    - Engaged in full-stack development to ensure a comprehensive and user-friendly ERP system
+    - Collaborated effectively with various departments, facilitating seamless communication and understanding of requirements
+    - Contributed significantly to improving overall team productivity by providing advanced tools for data analysis and reporting
 
 # Private Tutor
 - company: Mayfair Education
   position: Private Tutor
   duration: June, 2020 &mdash; December, 2022
   logo: images/mayfair_education.png
-  summary: Facilitated improvement in academic performance of 50+ high-school STEM students through 1-on-1 tutoring. Identified lagging skills, constructed personalized action plans, and provided positive reinforcement resulting in a 100% improvement by at least one grade band.
+  summary:
+    - Facilitated improvement in academic performance of 50+ high-school STEM students through 1-on-1 tutoring
+    - Identified lagging skills, constructed personalized action plans, and provided positive reinforcement resulting in a 100% improvement by at least one grade band
