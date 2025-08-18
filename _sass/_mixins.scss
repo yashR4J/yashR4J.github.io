@@ -51,7 +51,7 @@
 // type utilities
 
 @mixin sans {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 @mixin sans_light {
@@ -66,16 +66,16 @@
 
 @mixin sans_bold {
   @include sans;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @mixin sans_extrabold {
   @include sans;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 @mixin serif {
-  font-family: "Lora", "Minion Pro", Palatino, Georgia, serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 @mixin serif_regular {
@@ -85,7 +85,7 @@
 
 @mixin serif_bold {
   @include serif;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 // layout
