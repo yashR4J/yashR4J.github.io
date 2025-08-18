@@ -166,53 +166,5 @@
       const hoverCard = document.getElementById(cardId);
       hoverCard.classList.remove('active');
     }
-    
-    // Experience details hover functionality
-    function toggleDetailsHover(button, index) {
-      const hoverCard = document.getElementById(index);
-      const allHoverCards = document.querySelectorAll('.hover-card');
-      
-      // Close all other hover cards first
-      allHoverCards.forEach(card => {
-        if (card !== hoverCard) {
-          card.classList.remove('active');
-        }
-      });
-      
-      // Toggle current hover card
-      hoverCard.classList.toggle('active');
-    }
-    
-    // Project highlights hover functionality
-    function toggleHighlightsHover(button, index) {
-      const hoverCard = document.getElementById(index);
-      const allHoverCards = document.querySelectorAll('.hover-card');
-      
-      // Close all other hover cards first
-      allHoverCards.forEach(card => {
-        if (card !== hoverCard) {
-          card.classList.remove('active');
-        }
-      });
-      
-      // Toggle current hover card
-      hoverCard.classList.toggle('active');
-    }
-    
-    // Project description hover functionality
-    function toggleDescriptionHover(button, index) {
-      const hoverCard = document.getElementById(index);
-      const allHoverCards = document.querySelectorAll('.hover-card');
-      
-      // Close all other hover cards first
-      allHoverCards.forEach(card => {
-        if (card !== hoverCard) {
-          card.classList.remove('active');
-        }
-      });
-      
-      // Toggle current hover card
-      hoverCard.classList.toggle('active');
-    }
   </script>
 </head>

@@ -70,46 +70,21 @@
 
         {% for job in site.data.experience %}
         <div class="resume-item experience-card" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <div class="experience-header">
-            <div class="experience-info">
-              <h3 class="resume-item-title" itemprop="name">
-                {% if job.logo %}<img class="company-logo" src="{{ job.logo }}" alt="{{ job.company }} logo" />{% endif %}
-                {{ job.company }}
-              </h3>
-              <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
-            </div>
-            <div class="experience-actions">
-              <button class="icon-btn details-btn" onclick="toggleDetailsHover(this, 'exp-{{ forloop.index }}')" aria-label="Show job details">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="8"/>
-                  <path d="m21 21-4.35-4.35"/>
-                </svg>
-              </button>
-            </div>
-          </div>
+          <h3 class="resume-item-title" itemprop="name">
+            {% if job.logo %}<img class="company-logo" src="{{ job.logo }}" alt="{{ job.company }} logo" />{% endif %}
+            {{ job.company }}
+          </h3>
+          <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
           
           {% if job.summary %}
-          <div class="hover-card details-hover" id="exp-{{ forloop.index }}">
-            <div class="hover-card-header">
-              <h4>Role Details</h4>
-              <button class="close-btn" onclick="closeHoverCard('exp-{{ forloop.index }}')" aria-label="Close">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </button>
-            </div>
-            <div class="hover-card-content">
-              {% if job.summary.first %}
-              <ul class="summary-list">
-                {% for item in job.summary %}
-                <li class="summary-item">{{ item }}</li>
-                {% endfor %}
-              </ul>
-              {% else %}
+          <div class="summary-container">
+            {% if job.summary.first %}
+              {% for item in job.summary %}
+              <div class="summary-item">{{ item }}</div>
+              {% endfor %}
+            {% else %}
               <p class="job-summary">{{ job.summary }}</p>
-              {% endif %}
-            </div>
+            {% endif %}
           </div>
           {% endif %}
         </div><!-- end of resume-item -->
@@ -258,33 +233,8 @@
             {% endif %}
             <div class="project-body">
               <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-              <div class="project-header">
-                <div class="project-info">
-                  <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
-                  <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
-                </div>
-                <div class="project-actions">
-                  {% if project.highlights %}
-                  <button class="icon-btn highlights-btn" onclick="toggleHighlightsHover(this, 'proj-{{ forloop.index }}')" aria-label="Show project highlights">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M9 11l3 3L22 4"/>
-                      <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-                    </svg>
-                  </button>
-                  {% endif %}
-                  {% if project.description and not project.highlights %}
-                  <button class="icon-btn description-btn" onclick="toggleDescriptionHover(this, 'proj-{{ forloop.index }}')" aria-label="Show project description">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                      <polyline points="14,2 14,8 20,8"/>
-                      <line x1="16" y1="13" x2="8" y2="13"/>
-                      <line x1="16" y1="17" x2="8" y2="17"/>
-                      <polyline points="10,9 9,9 8,9"/>
-                    </svg>
-                  </button>
-                  {% endif %}
-                </div>
-              </div>
+              <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
+              <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
 
               {% if project.tech %}
                 <ul class="badge-list">
@@ -295,41 +245,13 @@
               {% endif %}
 
               {% if project.highlights %}
-              <div class="hover-card highlights-hover" id="proj-{{ forloop.index }}">
-                <div class="hover-card-header">
-                  <h4>Project Highlights</h4>
-                  <button class="close-btn" onclick="closeHoverCard('proj-{{ forloop.index }}')" aria-label="Close">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <line x1="18" y1="6" x2="6" y2="18"></line>
-                      <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                  </button>
-                </div>
-                <div class="hover-card-content">
-                  <ul class="highlights-list">
-                    {% for h in project.highlights %}
-                    <li class="highlight-item">{{ h }}</li>
-                    {% endfor %}
-                  </ul>
-                </div>
+              <div class="highlights-container">
+                {% for h in project.highlights %}
+                <div class="highlight-item">{{ h }}</div>
+                {% endfor %}
               </div>
-              {% endif %}
-
-              {% if project.description and not project.highlights %}
-              <div class="hover-card description-hover" id="proj-{{ forloop.index }}">
-                <div class="hover-card-header">
-                  <h4>Project Description</h4>
-                  <button class="close-btn" onclick="closeHoverCard('proj-{{ forloop.index }}')" aria-label="Close">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                      <line x1="18" y1="6" x2="6" y2="18"></line>
-                      <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                  </button>
-                </div>
-                <div class="hover-card-content">
-                  <p class="project-description">{{ project.description }}</p>
-                </div>
-              </div>
+              {% elsif project.description %}
+                <p class="resume-item-copy">{{ project.description }}</p>
               {% endif %}
 
               {% if project.actions %}
