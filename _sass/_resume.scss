@@ -21,7 +21,7 @@ html {
 [data-theme="dark"] {
   --bg-primary: #0f0f23;
   --bg-secondary: #1a1a2e;
-  --bg-card: #16213e;
+  --bg-card: #0f0f23;
   --text-primary: #e8e8e8;
   --text-secondary: #b8b8b8;
   --text-muted: #8b8b8b;
@@ -33,7 +33,7 @@ html {
   color: var(--text-primary);
   
   .page-header {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     border-bottom: 1px solid var(--border-color);
   }
   
@@ -643,11 +643,18 @@ html {
 // Mobile adjustments for theme toggle
 @include media_mobile {
   .theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    margin: 0;
-    display: block;
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    .theme-icon {
+      width: 20px !important;
+      height: 20px !important;
+    }
   }
 }
 
