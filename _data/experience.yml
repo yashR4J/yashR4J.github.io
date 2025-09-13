@@ -7,7 +7,7 @@
   logo: images/wisetech.png
   summary:
   - Maintained and enhanced a secure remote access gateway (WiseCloud Accessor - WCA) in **C#/.NET**, focusing on **Performance Tuning**, **Security Hardening** (parameter signing, ephemeral AD credentials), and **Load-Balancing/routing** refinements for large-scale **RDP** session delivery.
-  - Implemented synthetic end‑to‑end session journey monitoring (login → selection → RDP) and consolidated observability (probe metrics, journey success rates, error taxonomy) into **Kibana** for faster regression detection and MTTR reduction.
+  - Implemented synthetic WCA end‑to‑end session journey monitoring (login → selection → RDP) and consolidated observability (probe metrics, journey success rates, error taxonomy) into **Kibana** for faster regression detection and MTTR reduction.
   - Specialized in **SQL Server AlwaysOn Availability Groups**. Engineered safe detach/rejoin sequences, recovery timing improvements, and guarded confirmation/validation steps (log chain, schema) within the database restore (**DBBR**) workflows.
   - Automated replication status publishing and web service lifecycle consistency (**log shipping** + **IIS orchestration**) using **Parallel Processing**, configuration‑driven reconciliation, and structured **Telemetry**.
   - Mentored 30+ associate developers in WiseTech’s Earn & Learn Program—delivering workshops and providing hands-on coaching in **Programming Fundamentals**, **Secure Coding**, and **Resilient .NET Service Design**.
