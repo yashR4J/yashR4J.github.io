@@ -80,7 +80,7 @@
           <div class="summary-container">
             {% if job.summary.first %}
               {% for item in job.summary %}
-              <div class="summary-item">{{ item }}</div>
+              <div class="summary-item">{{ item | markdownify }}</div>
               {% endfor %}
             {% else %}
               <p class="job-summary">{{ job.summary }}</p>
