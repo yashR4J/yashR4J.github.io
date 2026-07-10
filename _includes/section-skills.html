@@ -1,0 +1,23 @@
+<section class="section" id="skills" aria-labelledby="skills-title">
+  <div class="section__inner">
+    <header class="section__header reveal">
+      <p class="section__eyebrow" aria-hidden="true">04</p>
+      <h2 class="section__title" id="skills-title">Skills</h2>
+      <p class="section__intro">The tools I reach for, grouped by how I use them.</p>
+    </header>
+    <div class="section__body">
+      <div class="skills">
+        {% for group in site.data.skills %}
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title">{{ group.category }}</h3>
+          <ul class="badge-list">
+            {% for item in group.items %}
+            <li class="badge">{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

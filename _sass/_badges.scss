@@ -1,0 +1,36 @@
+/* ============ D10. Badge / tag ============ */
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  border: var(--rule);
+  background: var(--surface-2);
+  color: var(--text-2);
+  font: var(--fw-medium) var(--fs-2xs)/1.2 var(--font-mono);
+  white-space: nowrap;
+  /* no hover state — not interactive */
+}
+
+.badge--wrap {
+  white-space: normal;
+  text-align: left;
+  line-height: var(--lh-tight);
+}
+
+.badge--accent {
+  background: var(--accent-subtle);
+  border-color: transparent;
+  color: var(--accent);
+  font-weight: var(--fw-semibold);
+}

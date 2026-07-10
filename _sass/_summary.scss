@@ -1,0 +1,24 @@
+/* ============ D6. Professional summary ============ */
+
+.summary {
+  max-width: var(--prose-max);
+}
+
+.summary__lead {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-body);
+  color: var(--text-1);
+  margin: 0 0 var(--space-4);
+}
+
+.summary__more {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--text-2);
+  margin: 0;
+}
+
+.summary strong {
+  font-weight: var(--fw-semibold);
+  color: var(--text-1);
+}

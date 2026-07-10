@@ -1,0 +1,20 @@
+/* ============ G2. Scroll entrance reveals ============ */
+/*
+ * Scoped under html.js AND prefers-reduced-motion: no-preference so the effect
+ * is a pure no-op without JS (zero content gating) or when motion is reduced.
+ * Only opacity/transform animate → zero CLS.
+ */
+
+@media (prefers-reduced-motion: no-preference) {
+  html.js .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity var(--dur-slow) var(--ease-out),
+                transform var(--dur-slow) var(--ease-out);
+  }
+
+  html.js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}

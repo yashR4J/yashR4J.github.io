@@ -1,0 +1,52 @@
+/* ============ D15. Social links ============ */
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links__item {
+  min-width: 0;
+}
+
+.social-links__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.25rem;
+  padding: 0 var(--space-3);
+  border: var(--rule);
+  border-radius: var(--radius-full);
+  color: var(--text-2);
+  font: var(--fw-medium) var(--fs-xs)/1 var(--font-sans);
+  text-decoration: none;
+  transition: color var(--dur-base) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out),
+              background-color var(--dur-base) var(--ease-out);
+
+  &:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-subtle);
+  }
+
+  &:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+}
+
+.social-links__icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.social-links__label {
+  /* visible text — icons are no longer label-free */
+  white-space: nowrap;
+}

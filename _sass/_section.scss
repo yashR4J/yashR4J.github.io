@@ -1,0 +1,38 @@
+/* ============ D5. Section wrapper ============ */
+
+.section {
+  padding: var(--space-8) 0;
+  scroll-margin-top: calc(var(--nav-height) + var(--space-4));
+  border-top: var(--rule);
+}
+
+.section__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.section__header {
+  margin-bottom: var(--space-6);
+  max-width: var(--prose-max);
+}
+
+.section__eyebrow {
+  font: var(--fw-medium) var(--fs-2xs)/1 var(--font-mono);
+  letter-spacing: var(--ls-mono);
+  color: var(--accent);
+  margin: 0 0 var(--space-2);
+}
+
+.section__title {
+  font: var(--fw-bold) var(--fs-h2)/var(--lh-heading) var(--font-sans);
+  letter-spacing: var(--ls-heading);
+  color: var(--text-1);
+  margin: 0;
+}
+
+.section__intro {
+  font-size: var(--fs-base);
+  color: var(--text-3);
+  margin: var(--space-3) 0 0;
+}

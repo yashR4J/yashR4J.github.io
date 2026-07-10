@@ -2,6 +2,8 @@
 
 # Thesis
 - project: Enabling Passive Measurement of Microsoft Teams Performance on Campus Networks
+  short_name: "GoTeamsFlow — Passive Teams Performance Measurement"
+  featured: true
   role: Author, Researcher
   duration: 2024
   url: https://drive.google.com/file/d/1aFmF6CFS9GnRQxPraM2nXgSY1BLh_6W_/view?usp=sharing
@@ -13,6 +15,8 @@
 
 # Fuzzer
 - project: Multi-Format Security Testing Fuzzer with Crash Analysis
+  short_name: "Multi-Format Security Fuzzer"
+  featured: true
   role: Team Lead & Primary Developer
   duration: 2024
   url: https://github.com/Domin0de/COMP6447-beedrill
@@ -20,9 +24,11 @@
   highlights:
     - Developed a modular, multi-format fuzzer with 20+ mutation strategies, intelligent crash detection, and ltrace-based code coverage visualization
     - Optimized vulnerability discovery through file-specific fuzzers and function call analysis
-    
+
 # Finance Event Intelligence Platform
 - project: Finance Event Intelligence Platform
+  short_name: "Finance Event Intelligence Platform"
+  featured: true
   role: Product Owner, Lead Backend Engineer
   duration: 2024
   url: https://unsw-my.sharepoint.com/:b:/g/personal/z5317349_ad_unsw_edu_au/EfFepNucSIpEpR1ubw40tVMBDT50FNmVJ0hLLnORfkFQIw?e=xKu6yh
@@ -34,6 +40,7 @@
 
 # E-Invoice Management Web Application
 - project: E‑Invoice Management Web Application
+  short_name: "E-Invoice Management Platform"
   role: Technical Team Lead, Scrum Master & Developer
   duration: 2023
   url: https://seng2021-coders.web.app/
@@ -45,6 +52,7 @@
 
 # Neural Networks
 - project: Automated Speaker Verification — DNNs & Transfer Learning
+  short_name: "Automated Speaker Verification"
   role: Team Lead & Primary Developer
   duration: 2022
   url: https://drive.google.com/file/d/1HijS6-6f-ZSWZjqTCZIvWHUStWlssU2F/view?usp=share_link
@@ -55,6 +63,7 @@
 
 # Covid-19 Tracker
 - project: COVID‑19 Tracker
+  short_name: "COVID-19 Tracker"
   role: Developer
   duration: 2022
   url: https://covid-19-tracker-356a7.web.app/
@@ -65,6 +74,7 @@
 
 # Object-oriented programming
 - project: Dungeon RPG Game
+  short_name: "Dungeon RPG Game"
   role: Technical Team Lead, Scrum Master & Developer
   duration: 2021
   url: https://github.com/yashR4J/object_oriented_design_and_programming/tree/main/project
@@ -73,8 +83,9 @@
     - Applied Strategy, State, Composite, and Observer patterns to model combat and AI behaviors.
     - Maintained high cohesion/low coupling with testable modules and CI checks.
 
-# Webserver Backend 
+# Webserver Backend
 - project: Online Discussion Forum — Webserver Backend
+  short_name: "Discussion Forum Backend"
   role: Team Lead & Primary Developer
   duration: 2021
   url: https://github.com/yashR4J/online_discussion_forum
@@ -83,8 +94,9 @@
     - Implemented token‑based authentication, session management, and role‑based permissions.
     - Delivered RESTful endpoints with unit/integration tests; top‑10% in 250‑student cohort.
 
-# R2R 
+# R2R
 - project: Robots to the Rescue — Design Project
+  short_name: "Robots to the Rescue"
   role: Team Lead & Primary Developer
   duration: 2020
   url: https://unsw-my.sharepoint.com/:w:/g/personal/z5317349_ad_unsw_edu_au/EQiAUmjOB3hPsgbHMY_K1-8BM1hBEJBUt4e133WGMp0PLw?e=vMU7DK

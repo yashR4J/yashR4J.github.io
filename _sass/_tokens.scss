@@ -1,0 +1,143 @@
+/* ============ Sass-level (media queries can't use CSS vars) ============ */
+$bp-sm: 480px;   // large phones
+$bp-md: 768px;   // tablets / nav collapse point
+$bp-lg: 1024px;  // desktop
+$bp-xl: 1200px;  // wide
+
+/* ============ Base tokens (theme-independent) ============ */
+:root {
+  /* --- Typography --- */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Fluid type scale (min @ 320px viewport → max @ 1200px) */
+  --fs-display: clamp(2.5rem, 1.9rem + 3vw, 4rem);        /* hero name */
+  --fs-h2: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);          /* section titles */
+  --fs-h3: clamp(1.125rem, 1.05rem + 0.4vw, 1.375rem);     /* item titles */
+  --fs-lg: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);      /* lead / summary text */
+  --fs-base: 1rem;
+  --fs-sm: 0.875rem;
+  --fs-xs: 0.8125rem;                                       /* badges, meta */
+  --fs-2xs: 0.75rem;                                        /* mono eyebrows */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 800;      /* hero name only */
+
+  --lh-display: 1.05;
+  --lh-heading: 1.25;
+  --lh-body: 1.65;
+  --lh-tight: 1.4;
+
+  --ls-display: -0.025em;
+  --ls-heading: -0.015em;
+  --ls-mono: 0.08em;    /* uppercase mono labels */
+  --ls-normal: 0;
+
+  /* --- Spacing (4px base) --- */
+  --space-1: 0.25rem;   /*  4px */
+  --space-2: 0.5rem;    /*  8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.5rem;    /* 24px */
+  --space-6: 2rem;      /* 32px */
+  --space-7: 3rem;      /* 48px */
+  --space-8: 4rem;      /* 64px */
+  --space-9: 6rem;      /* 96px */
+
+  /* --- Layout --- */
+  --container-max: 66rem;    /* 1056px — grids, nav */
+  --prose-max: 46rem;        /* 736px — running text */
+  --nav-height: 4rem;        /* 64px desktop */
+  --nav-height-mobile: 3.5rem;
+
+  /* --- Radii --- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* --- Borders --- */
+  --border-w: 1px;
+  --rule: 1px solid var(--border);          /* hairline section rules */
+  --rule-strong: 1px solid var(--border-strong);
+
+  /* --- Z-index scale --- */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-mobile-menu: 90;
+  --z-nav: 100;
+  --z-skip: 200;
+
+  /* --- Motion --- */
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 400ms;
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* --- Focus --- */
+  --focus-ring: 2px solid var(--accent);
+  --focus-offset: 2px;
+}
+
+/* ============ Light theme (DEFAULT — must stand fully on its own) ============ */
+:root, [data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #FAFAF7;             /* warm paper */
+  --surface: #FFFFFF;        /* cards, nav */
+  --surface-2: #F1F2EE;      /* subtle wells: badges, code-ish chips */
+  --text-1: #1A1D1C;         /* primary text     — 15.6:1 on --bg */
+  --text-2: #454B49;         /* secondary text   —  8.2:1 on --bg */
+  --text-3: #5B6663;         /* muted meta       —  5.2:1 on --bg */
+  --border: #E2E5DF;
+  --border-strong: #C6CCC4;
+
+  --accent: #0F766E;         /* deep teal — 5.4:1 on #FFF, 4.9:1 on --bg */
+  --accent-hover: #0B5D57;
+  --accent-subtle: #E4F1EF;  /* tint fill (timeline dots, active nav pill) */
+  --on-accent: #FFFFFF;      /* text on accent fills — 5.4:1 */
+
+  --success: #15803D;
+  --warning: #A16207;
+  --danger:  #B42318;
+
+  --shadow-sm: 0 1px 2px rgba(16, 20, 19, 0.05);
+  --shadow-md: 0 2px 8px rgba(16, 20, 19, 0.07), 0 1px 2px rgba(16, 20, 19, 0.04);
+  --shadow-lg: 0 12px 32px rgba(16, 20, 19, 0.10), 0 2px 8px rgba(16, 20, 19, 0.05);
+
+  --nav-bg: rgba(250, 250, 247, 0.92);   /* sticky nav; pairs with backdrop-filter */
+}
+
+/* ============ Dark theme ============ */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #0E1211;             /* near-black, subtle green cast */
+  --surface: #161B1A;
+  --surface-2: #1D2422;
+  --text-1: #ECEFED;         /* 15.9:1 on --bg */
+  --text-2: #B4BCB8;         /*  9.1:1 on --bg */
+  --text-3: #8B9490;         /*  5.6:1 on --bg */
+  --border: #262D2B;
+  --border-strong: #3A423F;
+
+  --accent: #2DD4BF;         /* teal-400 — 10.7:1 on --bg */
+  --accent-hover: #5EEAD4;
+  --accent-subtle: #12312D;
+  --on-accent: #04211D;      /* dark text on bright accent fills — 9.8:1 */
+
+  --success: #4ADE80;
+  --warning: #FBBF24;
+  --danger:  #F87171;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+
+  --nav-bg: rgba(14, 18, 17, 0.90);
+}

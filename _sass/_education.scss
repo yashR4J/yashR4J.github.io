@@ -1,0 +1,232 @@
+/* ============ D11. Education ============ */
+
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.education__item {
+  /* flat */
+  border-top: var(--rule-strong);
+  padding-top: var(--space-5);
+
+  &:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+
+.education__header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+
+  @media (max-width: ($bp-sm - 1px)) {
+    grid-template-columns: auto 1fr;
+
+    .education__meta {
+      grid-column: 2;
+    }
+  }
+}
+
+.education__logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: var(--rule);
+  padding: 4px;
+}
+
+.education__heading {
+  min-width: 0; /* allow degree/school text to wrap within the header grid */
+}
+
+.education__degree {
+  font: var(--fw-semibold) var(--fs-h3)/var(--lh-heading) var(--font-sans);
+  letter-spacing: var(--ls-heading);
+  color: var(--text-1);
+  margin: 0;
+}
+
+.education__school {
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  margin: 2px 0 0;
+}
+
+.education__meta {
+  font: var(--fw-regular) var(--fs-xs)/var(--lh-tight) var(--font-mono);
+  color: var(--text-3);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.education__badges {
+  margin: var(--space-3) 0 var(--space-4);
+}
+
+.education__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 2.75rem;
+  padding: 0 var(--space-4);
+  border: var(--rule);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text-1);
+  font: var(--fw-medium) var(--fs-sm)/1 var(--font-sans);
+  cursor: pointer;
+  transition: border-color var(--dur-base) var(--ease-out),
+              background-color var(--dur-base) var(--ease-out);
+
+  &:hover {
+    border-color: var(--accent);
+    background: var(--accent-subtle);
+  }
+
+  &[aria-expanded="true"] {
+    border-color: var(--accent);
+    color: var(--accent);
+
+    .education__toggle-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+}
+
+.education__toggle-label {
+  min-width: 0;
+}
+
+.education__toggle-count {
+  font: var(--fw-regular) var(--fs-2xs)/1 var(--font-mono);
+  color: var(--text-3);
+}
+
+.education__toggle-icon {
+  width: 14px;
+  height: 14px;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform var(--dur-base) var(--ease-out);
+  }
+}
+
+/* Expand/collapse via grid rows (no layout jump) */
+.education__detail {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: grid-template-rows var(--dur-slow) var(--ease-out);
+  }
+
+  &.is-open {
+    grid-template-rows: 1fr;
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.education__detail-inner {
+  overflow: hidden;
+  padding-top: var(--space-4);
+}
+
+.education__detail-title {
+  font: var(--fw-semibold) var(--fs-2xs)/1 var(--font-mono);
+  letter-spacing: var(--ls-mono);
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin: var(--space-4) 0 var(--space-3);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-1) var(--space-4);
+
+  @media (min-width: $bp-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.course-list__item {
+  font: var(--fw-regular) var(--fs-xs)/var(--lh-tight) var(--font-mono);
+  color: var(--text-2);
+  padding: var(--space-1) 0;
+}
+
+.course-list__code {
+  color: var(--accent);
+  font-weight: var(--fw-medium);
+  margin-right: var(--space-1);
+}
+
+.club-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.club {
+  /* flat */
+  min-width: 0;
+}
+
+.club__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.club__logo {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-xs);
+  object-fit: contain;
+}
+
+.club__name {
+  font: var(--fw-semibold) var(--fs-sm)/var(--lh-tight) var(--font-sans);
+  color: var(--text-1);
+  margin: 0;
+}
+
+.club__meta {
+  font: var(--fw-regular) var(--fs-2xs)/1 var(--font-mono);
+  color: var(--text-3);
+  margin: 0;
+}
+
+.club__desc {
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  margin: var(--space-1) 0 0;
+  max-width: var(--prose-max);
+}

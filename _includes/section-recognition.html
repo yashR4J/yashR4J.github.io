@@ -1,0 +1,20 @@
+<section class="section" id="recognition" aria-labelledby="recognition-title">
+  <div class="section__inner">
+    <header class="section__header reveal">
+      <p class="section__eyebrow" aria-hidden="true">06</p>
+      <h2 class="section__title" id="recognition-title">Recognition</h2>
+    </header>
+    <div class="section__body">
+      {% for recognition in site.data.recognitions %}
+      <article class="entry reveal">
+        {% if recognition.logo %}<img class="entry__logo" src="{{ recognition.logo }}" alt="" width="40" height="40" loading="lazy">{% endif %}
+        <div class="entry__body">
+          <h3 class="entry__title">{{ recognition.award }}</h3>
+          <p class="entry__meta">{{ recognition.organization }} · {{ recognition.year }}</p>
+          {% if recognition.summary %}<p class="entry__copy">{{ recognition.summary }}</p>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

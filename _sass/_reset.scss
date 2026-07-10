@@ -1,0 +1,70 @@
+/* ============ Modern minimal reset ============ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+figure,
+blockquote,
+dl, dd,
+ul, ol {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+/* Media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elements inherit typography */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+}
+
+/* Avoid overflow from long words */
+p,
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* min-width:0 so flex/grid children can shrink below content size */
+:where(main, section, article, div, li, ul, ol, p, header, footer, nav) {
+  min-width: 0;
+}
+
+/* Anchor targets sit clear of the sticky nav */
+:where([id]) {
+  scroll-margin-top: calc(var(--nav-height) + var(--space-4));
+}

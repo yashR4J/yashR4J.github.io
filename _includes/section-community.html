@@ -1,0 +1,21 @@
+<section class="section" id="community" aria-labelledby="community-title">
+  <div class="section__inner">
+    <header class="section__header reveal">
+      <p class="section__eyebrow" aria-hidden="true">07</p>
+      <h2 class="section__title" id="community-title">Community</h2>
+      <p class="section__intro">Student societies where I gave time back.</p>
+    </header>
+    <div class="section__body">
+      {% for association in site.data.associations %}
+      <article class="entry reveal">
+        {% if association.logo %}<img class="entry__logo" src="{{ association.logo }}" alt="" width="40" height="40" loading="lazy">{% endif %}
+        <div class="entry__body">
+          <h3 class="entry__title">{% if association.url %}<a href="{{ association.url }}" target="_blank" rel="noopener">{{ association.organization }}</a>{% else %}{{ association.organization }}{% endif %}</h3>
+          <p class="entry__meta">{{ association.role }}{% if association.role and association.year %} · {% endif %}{{ association.year }}</p>
+          {% if association.summary %}<p class="entry__copy">{{ association.summary }}</p>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

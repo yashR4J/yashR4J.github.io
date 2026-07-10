@@ -1,0 +1,213 @@
+/* ============ D8. Project cards ============ */
+
+/* ---- Featured tier ---- */
+.projects__featured {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+
+  @media (min-width: $bp-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  position: relative;
+  background: var(--surface);
+  border: var(--rule);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  height: 100%;
+  transition: box-shadow var(--dur-base) var(--ease-out),
+              border-color var(--dur-base) var(--ease-out),
+              transform var(--dur-base) var(--ease-out);
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--border-strong);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  /* focus ring drawn on the card for :has-capable engines */
+  &:has(.project-card__link:focus-visible) {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+  }
+}
+
+.project-card__body {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.project-card__meta {
+  display: flex;
+  gap: var(--space-3);
+  font: var(--fw-medium) var(--fs-2xs)/1 var(--font-mono);
+  letter-spacing: var(--ls-mono);
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin: 0;
+}
+
+.project-card__year {
+  color: var(--accent);
+}
+
+.project-card__role {
+  color: var(--text-3);
+}
+
+.project-card__title {
+  font: var(--fw-semibold) var(--fs-h3)/var(--lh-heading) var(--font-sans);
+  margin: 0;
+}
+
+.project-card__link {
+  color: var(--text-1);
+  text-decoration: none;
+  transition: color var(--dur-base) var(--ease-out);
+
+  /* card-wide click target */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  &:hover {
+    color: var(--accent);
+  }
+
+  /* fallback outline for non-:has engines */
+  &:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+    border-radius: 2px;
+  }
+}
+
+.project-card__highlights {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex-grow: 1;
+}
+
+.project-card__highlight {
+  position: relative;
+  padding-left: var(--space-4);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--text-2);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  strong {
+    font-weight: var(--fw-semibold);
+    color: var(--text-1);
+  }
+}
+
+.project-card__tech {
+  margin-top: auto; /* pin badges to card bottom */
+}
+
+/* ---- Secondary tier: compact rows ---- */
+.projects__list {
+  list-style: none;
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  border-top: var(--rule);
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-2) var(--space-5);
+  align-items: baseline;
+  padding: var(--space-4) 0;
+  border-bottom: var(--rule);
+  transition: background-color var(--dur-base) var(--ease-out),
+              box-shadow var(--dur-base) var(--ease-out);
+
+  &:hover {
+    background: var(--surface);
+    box-shadow: 0 0 0 var(--space-3) var(--surface);
+    border-radius: var(--radius-xs);
+  }
+
+  @media (max-width: ($bp-sm - 1px)) {
+    grid-template-columns: 1fr;
+
+    .project-row__meta {
+      grid-column: 1;
+    }
+  }
+}
+
+.project-row__main {
+  min-width: 0;
+}
+
+.project-row__title {
+  font: var(--fw-semibold) var(--fs-base)/var(--lh-tight) var(--font-sans);
+  margin: 0;
+}
+
+.project-row__link {
+  color: var(--text-1);
+  text-decoration: none;
+  transition: color var(--dur-base) var(--ease-out);
+
+  &:hover {
+    color: var(--accent);
+  }
+
+  &:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-offset);
+    border-radius: 2px;
+  }
+}
+
+.project-row__desc {
+  font-size: var(--fs-sm);
+  color: var(--text-3);
+  margin: var(--space-1) 0 0;
+  max-width: var(--prose-max);
+}
+
+.project-row__meta {
+  display: flex;
+  gap: var(--space-4);
+  font: var(--fw-regular) var(--fs-2xs)/var(--lh-tight) var(--font-mono);
+  color: var(--text-3);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.project-row__tech,
+.project-row__year {
+  color: var(--text-3);
+}

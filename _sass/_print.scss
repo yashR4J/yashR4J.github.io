@@ -1,0 +1,98 @@
+/* ============ E / I.16. Print stylesheet ============ */
+
+@media print {
+  /* Black on white, no color surfaces */
+  :root,
+  [data-theme="light"],
+  [data-theme="dark"] {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #ffffff;
+    --text-1: #000000;
+    --text-2: #000000;
+    --text-3: #333333;
+    --border: #999999;
+    --border-strong: #666666;
+    --accent: #000000;
+    --accent-hover: #000000;
+    --accent-subtle: #ffffff;
+    --on-accent: #000000;
+    --nav-bg: #ffffff;
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+  }
+
+  html {
+    background: #fff;
+    scroll-behavior: auto;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 12px; /* ~12px base */
+  }
+
+  /* Hide interactive chrome */
+  .site-nav,
+  .theme-toggle,
+  .skip-link,
+  .hero__actions,
+  .contact-cta__actions,
+  .education__toggle {
+    display: none !important;
+  }
+
+  /* Kill elevation everywhere */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Flat surfaces, no rounded elevation cues */
+  .project-card,
+  .contact-cta {
+    border: 1px solid #999 !important;
+    box-shadow: none !important;
+  }
+
+  /* Force education details visible regardless of toggle state */
+  .education__detail {
+    display: block !important;
+    grid-template-rows: none !important;
+  }
+
+  .education__detail[hidden] {
+    display: block !important;
+  }
+
+  .education__detail-inner {
+    overflow: visible !important;
+  }
+
+  /* Single-column grids */
+  .projects__featured,
+  .skills,
+  .course-list {
+    display: block !important;
+  }
+
+  .project-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: var(--space-4);
+  }
+
+  .timeline__item,
+  .entry,
+  .education__item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Show underlines on content links for print legibility */
+  a {
+    color: #000 !important;
+  }
+}

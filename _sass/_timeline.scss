@@ -1,0 +1,144 @@
+/* ============ D7. Experience timeline ============ */
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+
+  /* Spine (left aligns to marker center) */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+}
+
+.timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: var(--space-4);
+  padding-bottom: var(--space-7);
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  /* First item = current role: filled marker */
+  &:first-child .timeline__marker {
+    background: var(--accent);
+  }
+}
+
+.timeline__marker {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--bg);
+  border: 2px solid var(--accent);
+  margin: 6px auto 0 auto;
+  position: relative;
+  z-index: var(--z-raised);
+  box-shadow: 0 0 0 4px var(--bg);
+}
+
+.timeline__content {
+  /* flat — no card, no border */
+  min-width: 0;
+}
+
+.timeline__header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+
+  @media (max-width: ($bp-sm - 1px)) {
+    grid-template-columns: auto 1fr;
+
+    .timeline__meta {
+      grid-column: 2;
+    }
+  }
+}
+
+.timeline__logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: var(--rule);
+  padding: 4px;
+}
+
+.timeline__heading {
+  min-width: 0; /* allow role/company text to wrap within the header grid */
+}
+
+.timeline__role {
+  font: var(--fw-semibold) var(--fs-h3)/var(--lh-heading) var(--font-sans);
+  letter-spacing: var(--ls-heading);
+  color: var(--text-1);
+  margin: 0;
+}
+
+.timeline__company {
+  font-size: var(--fs-sm);
+  color: var(--text-2);
+  margin: 2px 0 0;
+}
+
+.timeline__meta,
+.timeline__duration,
+.timeline__location {
+  font: var(--fw-regular) var(--fs-xs)/var(--lh-tight) var(--font-mono);
+  color: var(--text-3);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.timeline__points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: var(--prose-max);
+}
+
+.timeline__point {
+  position: relative;
+  padding-left: var(--space-4);
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--text-2);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  strong {
+    font-weight: var(--fw-semibold);
+    color: var(--text-1);
+  }
+
+  /* markdownify may wrap content in <p> */
+  p {
+    margin: 0;
+    display: inline;
+  }
+}

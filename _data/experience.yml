@@ -3,7 +3,8 @@
 # Current Occupation
 - company: WiseTech Global
   position: Software Engineer
-  duration: February, 2023 &mdash; Present
+  duration: Feb 2023 — Present
+  location: "Sydney, Australia"
   logo: images/wisetech.png
   summary:
   - Maintained and enhanced a secure remote access gateway (WiseCloud Accessor - WCA) in **C#/.NET**, focusing on **Performance Tuning**, **Security Hardening** (parameter signing, ephemeral AD credentials), and **Load-Balancing/routing** refinements for large-scale **RDP** session delivery.
@@ -15,7 +16,8 @@
 # Private Tutor
 - company: UNSW - Faculty of Engineering and Computer Science
   position: Casual Academic (Tutor)
-  duration: February, 2023 &mdash; December, 2023
+  duration: Feb 2023 — Dec 2023
+  location: "Sydney, Australia"
   logo: images/unsw.png
   summary:
   - Delivered tutorials, labs, and assessment support for **COMP2521 Data Structures and Algorithms**
@@ -26,7 +28,8 @@
 # Software Internship
 - company: Sunswift Racing
   position: Technical Team Lead (Internal Tools)
-  duration: January, 2023 &mdash; January, 2024
+  duration: Jan 2023 — Jan 2024
+  location: "Sydney, Australia"
   logo: images/sunswift.png
   summary:
   - Contributed to the design and development of an **ERP software** as part of the Internal Tools team, facilitating a smooth transition from legacy spreadsheets to a cohesive and integrated environment
@@ -37,7 +40,7 @@
 # Private Tutor
 - company: Mayfair Education
   position: Private Tutor
-  duration: June, 2020 &mdash; December, 2022
+  duration: Jun 2020 — Dec 2022
   logo: images/mayfair_education.png
   summary:
   - Facilitated improvement in academic performance of 50+ high-school **STEM** students through 1-on-1 tutoring

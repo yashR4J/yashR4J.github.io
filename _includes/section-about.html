@@ -1,0 +1,14 @@
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="section__inner">
+    <header class="section__header reveal">
+      <p class="section__eyebrow" aria-hidden="true">01</p>
+      <h2 class="section__title" id="about-title">About</h2>
+    </header>
+    <div class="section__body">
+      <div class="summary">
+        <p class="summary__lead">{{ site.resume_summary_lead | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+        <p class="summary__more">{{ site.resume_summary_more | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+      </div>
+    </div>
+  </div>
+</section>

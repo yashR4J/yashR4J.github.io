@@ -1,14 +1,29 @@
 ---
 ---
 
-// "Reset" styles and SCSS reusable components
-@import "normalize";
-@import "mixins";
-@import "variables";
+// Design tokens (Section C) — must load first so vars cascade everywhere.
+@import "tokens";
 
-// Generic site base & layout styles
+// Modern minimal reset + global base/typography/links/utilities.
+@import "reset";
 @import "base";
-@import "layout";
 
-// Layouts
-@import "resume";
+// Components (Section D).
+@import "nav";
+@import "hero";
+@import "section";
+@import "summary";
+@import "timeline";
+@import "projects";
+@import "skills";
+@import "education";
+@import "entry";
+@import "badges";
+@import "buttons";
+@import "social";
+@import "contact";
+@import "footer";
+
+// Scroll-entrance reveals (Section G2) then print overrides last.
+@import "reveal";
+@import "print";

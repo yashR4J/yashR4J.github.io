@@ -1,6 +1,8 @@
 # Site settings
-title: "Yash Raj Online Resume"
-# description: "A resume template for Jekyll and GitHub Pages sites."
+title: "Yash Raj · Software Engineer"
+description: "Yash Raj is a software engineer at WiseTech Global in Sydney, building reliable C#/.NET platform services, cloud automation, and distributed systems."
+url: "https://yashr4j.github.io"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
@@ -9,37 +11,40 @@ sass:
   style: compressed
 
 # Resume settings
-resume_avatar:                  "true"
 resume_name:                    "Yash Raj"
 resume_title:                   "Software Engineer"
+resume_location:                "Sydney, Australia"   # inferred: UNSW + WiseTech Global (Sydney HQ) + +61 phone
 
-# used for the contact button in _layouts/resume.html
+# used for the contact button / mailto links
 resume_contact_email:           "yash.raj2@outlook.com"
-
-# the next two items are used for schema itemprops in _layouts/resume.html
 resume_contact_telephone:       "(+61) 0403 016 557"
-resume_contact_address:         ""
 
-resume_header_contact_info:     "(+61) 0403 016 557 • yash.raj2@outlook.com"
-display_header_contact_info:    "false"
+# Professional summary (About section) — paragraphs support **markdown** emphasis
+resume_summary_lead: >-
+  I'm a platform-focused engineer working in **C#/.NET**, with a grounding in cloud infrastructure,
+  distributed systems, automation, and performance optimisation. On WiseTech Global's **CargoWise Cloud**
+  team, I help harden critical access and recovery workflows — building scalable backend services,
+  improving system and data reliability, and creating self-service tooling that reduces operational effort.
+resume_summary_more: >-
+  Before that: a dual degree in Software Engineering (First Class Honours) and Finance at UNSW, a stint
+  teaching data structures to 150+ students, and a habit of mentoring — including 30+ associate developers
+  through WiseTech's Earn & Learn program. I care about systems that behave predictably under pressure,
+  and I'm growing toward deeper platform reliability ownership.
 
-resume_header_intro: "<p>Platform‑focused C#/.NET engineer with grounding in cloud infrastructure, distributed systems, automation, and performance optimization. I build scalable backend services, increase system and data reliability, and create self‑service tooling that reduces operational effort. Currently on WiseTech Global’s CargoWise Cloud team, collaborating across disciplines to harden critical access and recovery workflows while growing toward deeper platform reliability ownership.</p>"
-# use "yes" to display the email contact button,
-# "no" to display an "I'm not looking for work" message,
-# or remove the resume_looking_for_work option entirely
-# to leave blank
+# use "yes" to display the contact availability note,
+# "no" to hide it, or remove the option entirely
 resume_looking_for_work:        "yes"
 
 # Decide which sections to use
 # comment out to hide
 resume_section_experience:      true
-resume_section_education:       true
 resume_section_projects:        true
 resume_section_skills:          true
+resume_section_education:       true
 resume_section_recognition:     true
-# resume_section_links:           true
 resume_section_associations:    true
-# resume_section_interests:       true
+resume_section_interests:       true
+# resume_section_links:           true
 
 # Resume social links
 # uncomment the options you wish to display, and add your own URL
@@ -53,9 +58,6 @@ resume_social_links:
   # resume_website_url:           "https://yashr4j.github.io/"
   # resume_medium_url:            "insert Medium URL here"
 resume_print_social_links:      true
-
-# Design settings
-resume_theme:                   default
 
 # Note: when editing locally, remember to restart
 # your Jekyll server when you edit this file. Changes

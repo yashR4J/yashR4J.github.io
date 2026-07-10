@@ -1,0 +1,42 @@
+/* ============ D16. Contact CTA ============ */
+
+.contact-cta {
+  background: var(--surface);
+  border: var(--rule);
+  border-radius: var(--radius-lg);
+  padding: var(--space-7) var(--space-6);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+
+  @media (max-width: ($bp-sm - 1px)) {
+    padding: var(--space-6) var(--space-4);
+  }
+}
+
+.contact-cta__title {
+  font: var(--fw-bold) var(--fs-h2)/var(--lh-heading) var(--font-sans);
+  letter-spacing: var(--ls-heading);
+  color: var(--text-1);
+  margin: 0 0 var(--space-3);
+}
+
+.contact-cta__text {
+  font-size: var(--fs-base);
+  color: var(--text-2);
+  max-width: 34rem;
+  margin: 0 auto var(--space-5);
+}
+
+.contact-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
+.contact-cta__note {
+  font: var(--fw-regular) var(--fs-2xs)/var(--lh-tight) var(--font-mono);
+  color: var(--text-3);
+  margin: 0;
+}

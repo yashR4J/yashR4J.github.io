@@ -3,168 +3,63 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>Yash Raj · Software Engineer — C#/.NET, Cloud &amp; Distributed Systems</title>
+  <meta name="description" content="Yash Raj is a software engineer at WiseTech Global in Sydney, building reliable C#/.NET platform services, cloud automation, and distributed systems.">
+  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/">
 
-  <!-- Google font typography settings - defined in _config.yml -->
-  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap' rel='stylesheet' type='text/css'>
-
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
-  <link rel="stylesheet" href="css/main.css">
-  
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="icon" type="image/x-icon" href="favicon.png" />
-  
+  <!-- Theme (must run before paint to avoid FOUC; first visit honours OS preference) -->
   <script>
-    // Apply theme immediately to prevent flash of unstyled content
-    (function() {
-      const savedTheme = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', savedTheme);
+    (function () {
+      var t = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", t);
     })();
-    
-    // Theme toggle functionality - wait for DOM to load
-    document.addEventListener('DOMContentLoaded', function() {
-      const themeToggle = document.getElementById('theme-toggle');
-      const html = document.documentElement;
-      
-      if (themeToggle) {
-        // Check for saved theme preference or default to 'light'
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        html.setAttribute('data-theme', currentTheme);
-        
-        // Update button state
-        updateButtonState(currentTheme);
-        
-        // Theme toggle click handler
-        themeToggle.addEventListener('click', function() {
-          const currentTheme = html.getAttribute('data-theme');
-          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-          
-          html.setAttribute('data-theme', newTheme);
-          localStorage.setItem('theme', newTheme);
-          updateButtonState(newTheme);
-        });
-        
-        function updateButtonState(theme) {
-          const sunIcon = themeToggle.querySelector('.sun-icon');
-          const moonIcon = themeToggle.querySelector('.moon-icon');
-          
-          if (!sunIcon || !moonIcon) {
-            return;
-          }
-          
-          if (theme === 'dark') {
-            sunIcon.style.display = 'block';
-            moonIcon.style.display = 'none';
-          } else {
-            sunIcon.style.display = 'none';
-            moonIcon.style.display = 'block';
-          }
-        }
-      }
-    });
-    
-    // Click outside handler to close hover cards
-    document.addEventListener('click', function(event) {
-      const hoverCards = document.querySelectorAll('.hover-card.active');
-      const iconButtons = document.querySelectorAll('.icon-btn');
-      
-      // Check if click is outside hover cards and not on icon buttons
-      let clickedOnCard = false;
-      let clickedOnButton = false;
-      
-      hoverCards.forEach(card => {
-        if (card.contains(event.target)) {
-          clickedOnCard = true;
-        }
-      });
-      
-      iconButtons.forEach(button => {
-        if (button.contains(event.target)) {
-          clickedOnButton = true;
-        }
-      });
-      
-      // Close all hover cards if clicking outside
-      if (!clickedOnCard && !clickedOnButton) {
-        hoverCards.forEach(card => {
-          card.classList.remove('active');
-        });
-      }
-    });
-    
-    // Courses toggle functionality
-    function toggleCourses(button, index) {
-      const coursesContent = document.getElementById('courses-' + index);
-      const toggleText = button.querySelector('.toggle-text');
-      const toggleIcon = button.querySelector('.toggle-icon');
-      
-      if (coursesContent.style.display === 'none') {
-        coursesContent.style.display = 'block';
-        toggleText.textContent = 'Hide Course List';
-        toggleIcon.style.transform = 'rotate(180deg)';
-        button.classList.add('active');
-      } else {
-        coursesContent.style.display = 'none';
-        toggleText.textContent = 'Show Course List';
-        toggleIcon.style.transform = 'rotate(0deg)';
-        button.classList.remove('active');
-      }
-    }
-    
-    // Clubs toggle functionality
-    function toggleClubs(button, index) {
-      const clubsContent = document.getElementById('clubs-' + index);
-      const toggleText = button.querySelector('.toggle-text');
-      const toggleIcon = button.querySelector('.toggle-icon');
-      
-      if (clubsContent.style.display === 'none') {
-        clubsContent.style.display = 'block';
-        toggleText.textContent = 'Hide Clubs & Societies';
-        toggleIcon.style.transform = 'rotate(180deg)';
-        button.classList.add('active');
-      } else {
-        clubsContent.style.display = 'none';
-        toggleText.textContent = 'Show Clubs & Societies';
-        toggleIcon.style.transform = 'rotate(0deg)';
-        button.classList.remove('active');
-      }
-    }
-    
-    // Hover card functionality
-    function toggleCoursesHover(button, index) {
-      const hoverCard = document.getElementById('courses-hover-' + index);
-      const allHoverCards = document.querySelectorAll('.hover-card');
-      
-      // Close all other hover cards first
-      allHoverCards.forEach(card => {
-        if (card !== hoverCard) {
-          card.classList.remove('active');
-        }
-      });
-      
-      // Toggle current hover card
-      hoverCard.classList.toggle('active');
-    }
-    
-    function toggleClubsHover(button, index) {
-      const hoverCard = document.getElementById('clubs-hover-' + index);
-      const allHoverCards = document.querySelectorAll('.hover-card');
-      
-      // Close all other hover cards first
-      allHoverCards.forEach(card => {
-        if (card !== hoverCard) {
-          card.classList.remove('active');
-        }
-      });
-      
-      // Toggle current hover card
-      hoverCard.classList.toggle('active');
-    }
-    
-    function closeHoverCard(cardId) {
-      const hoverCard = document.getElementById(cardId);
-      hoverCard.classList.remove('active');
-    }
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Yash Raj · Software Engineer">
+  <meta property="og:description" content="C#/.NET platform engineering, cloud infrastructure, and distributed systems at WiseTech Global (CargoWise Cloud).">
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/">
+  <meta property="og:site_name" content="Yash Raj">
+  <meta property="og:image" content="{{ site.url }}/images/avatar.jpg">
+  <!-- PLACEHOLDER: replace og:image with a purpose-made 1200×630 images/og.png when available -->
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yash Raj · Software Engineer">
+  <meta name="twitter:description" content="C#/.NET platform engineering, cloud infrastructure, and distributed systems at WiseTech Global.">
+  <meta name="twitter:image" content="{{ site.url }}/images/avatar.jpg">
+
+  <meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0E1211" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/images/avatar.jpg">
+  <!-- PLACEHOLDER: proper 180×180 apple-touch-icon.png would be better; avatar.jpg is the honest stand-in -->
+
+  <!-- Fonts: preconnect ×2 + single Google Fonts request (Inter + JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+
+  <!-- JSON-LD Person (sameAs built from site.resume_social_links) -->
+  {% capture social_same_as %}{% for link in site.resume_social_links %}{% if link[1] and link[1] != "" %}"{{ link[1] }}"{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}{% endcapture %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yash Raj",
+    "jobTitle": "Software Engineer",
+    "worksFor": { "@type": "Organization", "name": "WiseTech Global" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of New South Wales" },
+    "email": "mailto:yash.raj2@outlook.com",
+    "telephone": "+61403016557",
+    "url": "https://yashr4j.github.io/",
+    "image": "https://yashr4j.github.io/images/avatar.jpg",
+    "address": { "@type": "PostalAddress", "addressLocality": "Sydney", "addressCountry": "AU" },
+    "sameAs": [ {{ social_same_as }} ]
+  }
   </script>
 </head>

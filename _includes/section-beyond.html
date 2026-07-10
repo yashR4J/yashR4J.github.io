@@ -1,0 +1,15 @@
+<section class="section" id="beyond" aria-labelledby="beyond-title">
+  <div class="section__inner">
+    <header class="section__header reveal">
+      <p class="section__eyebrow" aria-hidden="true">08</p>
+      <h2 class="section__title" id="beyond-title">Beyond Work</h2>
+    </header>
+    <div class="section__body">
+      <ul class="badge-list">
+        {% for interest in site.data.interests %}
+        <li class="badge">{{ interest.description }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

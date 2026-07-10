@@ -1,0 +1,49 @@
+<section class="section" id="projects" aria-labelledby="projects-title">
+  <div class="section__inner">
+    <header class="section__header reveal">
+      <p class="section__eyebrow" aria-hidden="true">03</p>
+      <h2 class="section__title" id="projects-title">Projects</h2>
+      <p class="section__intro">Selected work: passive network measurement, security fuzzing, and event-driven cloud services.</p>
+    </header>
+    <div class="section__body">
+      <div class="projects__featured">
+        {% for project in site.data.projects %}
+        {% if project.featured %}
+        <article class="project-card reveal">
+          <div class="project-card__body">
+            <p class="project-card__meta"><span class="project-card__year">{{ project.duration }}</span><span class="project-card__role">{{ project.role }}</span></p>
+            <h3 class="project-card__title"><a class="project-card__link" href="{{ project.url }}" target="_blank" rel="noopener">{{ project.short_name | default: project.project }}</a></h3>
+            <ul class="project-card__highlights">
+              {% for h in project.highlights limit: 3 %}
+              <li class="project-card__highlight">{{ h }}</li>
+              {% endfor %}
+            </ul>
+            {% if project.tech %}
+            <ul class="badge-list project-card__tech">
+              {% for t in project.tech %}
+              <li class="badge">{{ t }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+        </article>
+        {% endif %}
+        {% endfor %}
+      </div>
+
+      <ul class="projects__list">
+        {% for project in site.data.projects %}
+        {% unless project.featured %}
+        <li class="project-row reveal">
+          <div class="project-row__main">
+            <h3 class="project-row__title"><a class="project-row__link" href="{{ project.url }}" target="_blank" rel="noopener">{{ project.short_name | default: project.project }}</a></h3>
+            <p class="project-row__desc">{{ project.highlights | first }}</p>
+          </div>
+          <p class="project-row__meta"><span class="project-row__tech">{{ project.tech | slice: 0, 3 | join: " · " }}</span><span class="project-row__year">{{ project.duration }}</span></p>
+        </li>
+        {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

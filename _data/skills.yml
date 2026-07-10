@@ -1,4 +1,4 @@
-# Skills (categorized)
+# Skills (categorized) — ordered to lead with strengths (SPEC F6)
 - category: Programming Languages
   items:
     - Go (Golang)
@@ -12,16 +12,6 @@
     - PowerShell
     - SQL
     - HTML/CSS
-
-- category: Frameworks & Libraries
-  items:
-    - React
-    - Next.js
-    - Vue
-    - Django
-    - Express.js
-    - Node.js
-    - Material UI
 
 - category: Cloud & DevOps
   items:
@@ -62,6 +52,16 @@
     - Observability
     - Performance Profiling
     - Agile / Scrum
+
+- category: Frameworks & Libraries
+  items:
+    - React
+    - Next.js
+    - Vue
+    - Django
+    - Express.js
+    - Node.js
+    - Material UI
 
 - category: AI / ML
   items:
