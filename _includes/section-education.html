@@ -46,7 +46,7 @@
                 {% for course in education.courses %}
                 {% assign code = course | split: ' ' | first %}
                 {% assign rest = course | remove_first: code | strip %}
-                <li class="course-list__item"><span class="course-list__code">{{ code }}</span>{{ rest }}</li>
+                <li class="course-list__item"><a class="course-list__link" href="https://www.handbook.unsw.edu.au/undergraduate/courses/2024/{{ code }}" target="_blank" rel="noopener"><span class="course-list__code">{{ code }}</span>{{ rest }}</a></li>
                 {% endfor %}
               </ul>
               {% endif %}
