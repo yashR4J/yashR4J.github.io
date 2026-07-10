@@ -33,7 +33,7 @@
 
       <ul class="projects__list">
         {% for project in site.data.projects %}
-        {% unless project.featured or project.beginner %}
+        {% unless project.featured or project.simpler %}
         <li class="project-row reveal">
           <div class="project-row__main">
             <h3 class="project-row__title"><a class="project-row__link" href="{{ project.url }}" target="_blank" rel="noopener">{{ project.short_name | default: project.project }}</a></h3>
@@ -45,16 +45,16 @@
         {% endfor %}
       </ul>
 
-      {% assign beginner_projects = site.data.projects | where_exp: "p", "p.beginner" %}
-      {% if beginner_projects.size > 0 %}
+      {% assign more_projects = site.data.projects | where_exp: "p", "p.simpler" %}
+      {% if more_projects.size > 0 %}
       <details class="projects__more reveal">
         <summary class="projects__more-toggle">
-          <span class="projects__more-label">Foundational projects</span>
-          <span class="projects__more-count">{{ beginner_projects.size }} early builds</span>
+          <span class="projects__more-label">More projects</span>
+          <span class="projects__more-count">{{ more_projects.size }} earlier builds</span>
           <span class="projects__more-icon" aria-hidden="true"></span>
         </summary>
         <ul class="projects__list projects__list--more">
-          {% for project in beginner_projects %}
+          {% for project in more_projects %}
           <li class="project-row">
             <div class="project-row__main">
               <h3 class="project-row__title"><a class="project-row__link" href="{{ project.url }}" target="_blank" rel="noopener">{{ project.short_name | default: project.project }}</a></h3>
