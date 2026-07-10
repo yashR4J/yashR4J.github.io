@@ -64,6 +64,8 @@
   uni: University of New South Wales
   year: 2020 — 2024
   logo: /images/unsw.png
+  honours: true
+  honours_label: First Class Honours
   awards:
     - award: UNSW Business School Dean's Award for Academic Excellence - Stage 3 (2021)
   courses:
