@@ -33,7 +33,7 @@
 
       <ul class="projects__list">
         {% for project in site.data.projects %}
-        {% unless project.featured %}
+        {% unless project.featured or project.simpler %}
         <li class="project-row reveal">
           <div class="project-row__main">
             <h3 class="project-row__title"><a class="project-row__link" href="{{ project.url }}" target="_blank" rel="noopener">{{ project.short_name | default: project.project }}</a></h3>
@@ -44,6 +44,28 @@
         {% endunless %}
         {% endfor %}
       </ul>
+
+      {% assign more_projects = site.data.projects | where_exp: "p", "p.simpler" %}
+      {% if more_projects.size > 0 %}
+      <details class="projects__more reveal">
+        <summary class="projects__more-toggle">
+          <span class="projects__more-label">More projects</span>
+          <span class="projects__more-count">{{ more_projects.size }} earlier builds</span>
+          <span class="projects__more-icon" aria-hidden="true"></span>
+        </summary>
+        <ul class="projects__list projects__list--more">
+          {% for project in more_projects %}
+          <li class="project-row">
+            <div class="project-row__main">
+              <h3 class="project-row__title"><a class="project-row__link" href="{{ project.url }}" target="_blank" rel="noopener">{{ project.short_name | default: project.project }}</a></h3>
+              <p class="project-row__desc">{{ project.highlights | first }}</p>
+            </div>
+            <p class="project-row__meta"><span class="project-row__tech">{{ project.tech | slice: 0, 3 | join: " · " }}</span><span class="project-row__year">{{ project.duration }}</span></p>
+          </li>
+          {% endfor %}
+        </ul>
+      </details>
+      {% endif %}
     </div>
   </div>
 </section>

@@ -71,6 +71,19 @@
     overflow: visible !important;
   }
 
+  /* Force foundational-projects disclosure open so nothing is dropped in print */
+  .projects__more .projects__list--more {
+    display: block !important;
+  }
+
+  .projects__more-toggle {
+    color: #999 !important;
+  }
+
+  .projects__more-icon {
+    display: none !important;
+  }
+
   /* Single-column grids */
   .projects__featured,
   .skills,
