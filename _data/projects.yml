@@ -64,6 +64,7 @@
 # Covid-19 Tracker
 - project: COVID‑19 Tracker
   short_name: "COVID-19 Tracker"
+  beginner: true
   role: Developer
   duration: 2022
   url: https://covid-19-tracker-356a7.web.app/
@@ -75,6 +76,7 @@
 # Object-oriented programming
 - project: Dungeon RPG Game
   short_name: "Dungeon RPG Game"
+  beginner: true
   role: Technical Team Lead, Scrum Master & Developer
   duration: 2021
   url: https://github.com/yashR4J/object_oriented_design_and_programming/tree/main/project
@@ -86,6 +88,7 @@
 # Webserver Backend
 - project: Online Discussion Forum — Webserver Backend
   short_name: "Discussion Forum Backend"
+  beginner: true
   role: Team Lead & Primary Developer
   duration: 2021
   url: https://github.com/yashR4J/online_discussion_forum
@@ -97,6 +100,7 @@
 # R2R
 - project: Robots to the Rescue — Design Project
   short_name: "Robots to the Rescue"
+  beginner: true
   role: Team Lead & Primary Developer
   duration: 2020
   url: https://unsw-my.sharepoint.com/:w:/g/personal/z5317349_ad_unsw_edu_au/EQiAUmjOB3hPsgbHMY_K1-8BM1hBEJBUt4e133WGMp0PLw?e=vMU7DK
