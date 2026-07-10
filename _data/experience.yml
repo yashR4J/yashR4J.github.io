@@ -1,9 +1,22 @@
 # Jobs
 
 # Current Occupation
+- company: Canva
+  position: Software Engineer
+  duration: Feb 2026 — Present
+  location: "Sydney, Australia"
+  # logo: images/canva.png   # TODO: add a Canva logo asset (120px square PNG)
+  summary:
+  - Backend engineer on the **Billing Experience** team (Revenue Platform), building compliant, scalable billing, invoicing and tax systems in **Java/Spring** on **AWS** (EKS, DynamoDB, Aurora/MySQL, SQS/SNS) with **protobuf/Finagle** RPC in a **Bazel** monorepo.
+  - Own the technical design for two workstreams of a **global tax-engine migration** — re-architecting synchronous tax-ID validation into an **asynchronous, queue-based pipeline** with retries and per-country fallback, expanding validation coverage across **40+ new countries**.
+  - Diagnosed and fixed a **fleet-wide graceful-shutdown race** in asynchronous task processing that was dropping billing and subscription operations, improving the reliability of queue-driven workers across services.
+  - Delivered a customer-facing **invoice-email feature end-to-end** (design doc → rollout), itemising subscription charges for clearer billing across emails reaching **millions of customers each month**.
+  - Executed safe **production database remediations** — schema/index alignment and large data backfills — using online migration tooling.
+
+# Previous Occupation
 - company: WiseTech Global
   position: Software Engineer
-  duration: Feb 2023 — Present
+  duration: Feb 2023 — Feb 2026
   location: "Sydney, Australia"
   logo: images/wisetech.png
   summary:

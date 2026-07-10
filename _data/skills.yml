@@ -13,19 +13,28 @@
     - SQL
     - HTML/CSS
 
-- category: Cloud & DevOps
+- category: Domains
   items:
-    - AWS (Lambda, API Gateway, S3, CloudWatch)
+    - Billing &amp; Payments
+    - Tax Compliance
+    - Invoicing &amp; Subscriptions
+    - Distributed Systems
+    - Event-Driven Architecture
+
+- category: Cloud &amp; DevOps
+  items:
+    - AWS (EKS, DynamoDB, Aurora, SQS/SNS, Lambda, S3)
+    - Bazel
+    - Buildkite
     - Terraform
     - Docker
-    - Firebase
-    - Railway
-    - Vite
-    - Google Cloud Platform
     - CI/CD
+    - Google Cloud Platform
 
-- category: Databases & Data
+- category: Databases &amp; Data
   items:
+    - Amazon DynamoDB
+    - Amazon Aurora (MySQL)
     - PostgreSQL
     - MySQL
     - MongoDB
@@ -53,8 +62,12 @@
     - Performance Profiling
     - Agile / Scrum
 
-- category: Frameworks & Libraries
+- category: Frameworks &amp; Libraries
   items:
+    - Spring
+    - Protocol Buffers (protobuf)
+    - Finagle
+    - gRPC
     - React
     - Next.js
     - Vue

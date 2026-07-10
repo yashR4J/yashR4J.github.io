@@ -1,6 +1,6 @@
 # Site settings
 title: "Yash Raj · Software Engineer"
-description: "Yash Raj is a software engineer at WiseTech Global in Sydney, building reliable C#/.NET platform services, cloud automation, and distributed systems."
+description: "Yash Raj is a software engineer on Canva's Billing Experience team in Sydney, building compliant, scalable billing, invoicing and tax systems in Java on AWS."
 url: "https://yashr4j.github.io"
 baseurl: ""
 
@@ -21,15 +21,15 @@ resume_contact_telephone:       "(+61) 0403 016 557"
 
 # Professional summary (About section) — paragraphs support **markdown** emphasis
 resume_summary_lead: >-
-  I'm a platform-focused engineer working in **C#/.NET**, with a grounding in cloud infrastructure,
-  distributed systems, automation, and performance optimisation. On WiseTech Global's **CargoWise Cloud**
-  team, I help harden critical access and recovery workflows — building scalable backend services,
-  improving system and data reliability, and creating self-service tooling that reduces operational effort.
+  I'm a backend engineer on Canva's **Billing Experience** team (Revenue Platform), building compliant,
+  scalable billing, invoicing and tax systems. I work in **Java/Spring** on **AWS** — designing
+  asynchronous, queue-driven services and the data models behind invoicing, tax and payments, with a
+  focus on reliability and correctness in systems where money has to be exactly right.
 resume_summary_more: >-
-  Before that: a dual degree in Software Engineering (First Class Honours) and Finance at UNSW, a stint
-  teaching data structures to 150+ students, and a habit of mentoring — including 30+ associate developers
-  through WiseTech's Earn & Learn program. I care about systems that behave predictably under pressure,
-  and I'm growing toward deeper platform reliability ownership.
+  Before Canva I spent three years at **WiseTech Global** hardening a secure remote-access gateway and
+  SQL Server recovery workflows in **C#/.NET**. I hold a dual degree in Software Engineering (First Class
+  Honours) and Finance from **UNSW**, taught data structures to 150+ students, and mentored 30+ developers
+  through WiseTech's Earn & Learn program. I care about systems that behave predictably under pressure.
 
 # use "yes" to display the contact availability note,
 # "no" to hide it, or remove the option entirely
