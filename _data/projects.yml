@@ -38,6 +38,18 @@
     - Automated multi‑stage CI/CD with Terraform and policy‑as‑code; embedded synthetic checks and SLO dashboards.
     - Delivered real‑time analytics with streaming transforms and pre‑aggregations for sub‑second UI latencies.
 
+# Arete — Agentic Health & Nutrition Coach
+- project: Arete — Agentic Personal Health & Nutrition Coach
+  short_name: "Arete — Agentic Health Coach"
+  role: Creator & Full-Stack Engineer
+  duration: 2026
+  url: https://arete-two-zeta.vercel.app/
+  tech: [Next.js, TypeScript, Prisma, Postgres, MCP]
+  highlights:
+    - Built a full-stack coaching app for logging nutrition, training, sleep, and symptoms, with all write logic in a shared service layer consumed by both web actions and AI agents.
+    - Exposed the app to AI agents via a self-hosted MCP server (OAuth 2.1 + dev bearer token), so an agentic coach can read trends and log entries through typed tools.
+    - Unified cross-datastore food search across Open Food Facts, USDA FDC, and FatSecret with barcode and AI-assisted import converging on one normalized pipeline.
+
 # E-Invoice Management Web Application
 - project: E‑Invoice Management Web Application
   short_name: "E-Invoice Management Platform"
